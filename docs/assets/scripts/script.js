@@ -55,9 +55,30 @@ menuBtn.addEventListener('click', function() {
 /*
     Nav Menu Links
 */
-//About Me Link
-//Portfolio Link
-//Contact Link
+//link1
+document.getElementById('navlink1').addEventListener('click', function() {
+    //close out nav menu if clicked
+    if(window.innerWidth <= 736) {
+        document.getElementById('menu-list').classList.remove('display-menu');
+        document.getElementById('menu').setAttribute('aria-expanded', 'false');
+    }
+});
+//link2
+document.getElementById('navlink2').addEventListener('click', function() {
+    //close out nav menu if clicked
+    if(window.innerWidth <= 736) {
+        document.getElementById('menu-list').classList.remove('display-menu');
+        document.getElementById('menu').setAttribute('aria-expanded', 'false');
+    }
+});
+//link3
+document.getElementById('navlink3').addEventListener('click', function() {
+    //close out nav menu if clicked
+    if(window.innerWidth <= 736) {
+        document.getElementById('menu-list').classList.remove('display-menu');
+        document.getElementById('menu').setAttribute('aria-expanded', 'false');
+    }
+});
 
 /*
     scroll event for header animations
@@ -179,4 +200,14 @@ btnVid.addEventListener('click', function() {
     }
     btnPrevious = btnVid;
     btnPrevious.setAttribute('aria-expanded', 'true');
+});
+
+/*
+    Update Portfolio image depending on screen orientation and size
+*/
+window.onload(function () {
+    //if screen is 736px or less and in portrait mode...
+    if (window.innerWidth <= 736 && (window.innerWidth < window.innerHeight)) {
+        
+    }
 });
