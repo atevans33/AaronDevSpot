@@ -899,7 +899,11 @@ p {
   grid-template-columns: repeat(auto-fill, minmax(724px, 1fr));
   -moz-column-gap: 2rem;
        column-gap: 2rem;
-  
+}
+@media screen and (max-width: 724px) {
+  .access-region .wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(80vw, 1fr));
+  }
 }
 
 .access-desc {
