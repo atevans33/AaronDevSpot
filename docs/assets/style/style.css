@@ -73,6 +73,30 @@ h2 {
   End Reset Styles
 */
 
+.skip-content { 
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: -4rem;
+}
+
+.skip-content:focus {
+  position: static;
+  border: none;
+  outline: none;
+}
+
+.skip-content:focus span {
+  border: 2px solid #0d0d0d;
+}
+
+.skip-content .link {
+  margin-left: 2rem;
+  font-size: 1.3rem;
+}
+
+
 .hide-visually {
   position: absolute;
   width: 1px;
@@ -105,7 +129,7 @@ h2 {
 
 p {
   font-family: "Quicksand", sans-serif;
-  color: #080506;
+  color: #0d0d0d;
 }
 
 .IO-el {
@@ -371,13 +395,13 @@ p {
 /* .link1, .link2, .link3*/
 @media screen and (max-width: 736px) {
   .menu .link1{
-    animation: display-navlink 1000ms ease-in-out 700ms forwards;
+    animation: display-navlink 1000ms ease-in-out 300ms forwards;
   }
   .menu .link2{
-    animation: display-navlink 1000ms ease-in-out 900ms forwards;
+    animation: display-navlink 1000ms ease-in-out 400ms forwards;
   }
   .menu .link3{
-    animation: display-navlink 1000ms ease-in-out 1000ms forwards;
+    animation: display-navlink 1000ms ease-in-out 500ms forwards;
   }
 }
 
@@ -870,8 +894,13 @@ p {
      object-fit: cover;
 }
 
-.card1 .text {
+.screen-card .website-link {
+  text-decoration: none;
+}
+
+.screen-card .text {
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .card1 .img {
@@ -879,6 +908,7 @@ p {
  aspect-ratio: 9/16;
  box-shadow: 0px 0px 27px 3px rgba(0, 0, 0, 0.75);
  display: none;
+ border-radius: 1.5rem;
 }
 @media screen and (max-width: 736px) and (orientation: portrait) {
   .card1 .img {
@@ -1088,7 +1118,7 @@ p {
   width: 100%;
   display: grid;
   -moz-column-gap: 1rem;
-       column-gap: 1rem;
+  column-gap: 1rem;
 }
 
 .access-region .link {
@@ -1138,6 +1168,10 @@ p {
   color: #592121;
 }
 
+.accordian .contact {
+  cursor: pointer;
+}
+
 .accordian .adobe .contact {
   background-color: #592121;
 }
@@ -1158,6 +1192,13 @@ p {
 
 .accordian .ppt .contact {
   background-color: #4C2159;
+  flex-grow: 1;
+}
+
+.ppt .btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .accordian .video .open {
@@ -1185,6 +1226,221 @@ p {
   border: none;
 }
 
+.dialog1 {
+  position: fixed;
+  border: none;
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
+  top: 0;
+  left: 0;
+  background: none;
+  box-sizing: border-box;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+@media screen and (orientation: portrait) {
+  .dialog1 {
+    align-items: end;
+  }
+}
+
+.access-region .display {
+  display: flex;
+}
+
+.dialog1 .dialog1-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  background-color: white;
+  border-radius: 2rem;
+  max-width: 100vw;
+  max-height: 70vh;
+  max-height: 70svh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+@media screen and (orientation: portrait) {
+  .dialog1 .dialog1-content {
+    border-radius: 2rem 2rem 0 0;
+    bottom: -70vh;
+    bottom: -70svh;
+    animation: move-dialog-up 700ms ease-in-out forwards;
+  }
+}
+
+@keyframes move-dialog-up {
+  from {
+    bottom: -75vh;
+    bottom: -75svh;
+  }
+  to {
+    bottom: 0;
+    bottom: 0;
+  }
+}
+
+.dialog1 .dialog1-content::-webkit-scrollbar {
+   display: none;
+}
+
+.dialog1 .exit {
+  position: sticky;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.dialog1 p {
+  max-width: 50ch;
+  line-height: 200%;
+  letter-spacing: 1px;
+}
+
+.dialog1 .dialog-lbl {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  line-height: 140%;
+}
+
+.dialog1 .form {
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog1 .lbl, .dialog1 .input, .dialog1 .file, .dialog1 .textarea {
+  margin: .5rem 0 0 0;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+}
+
+.dialog1 .lbl {
+  position: relative;
+  font-size: 1.1rem;
+  text-align: left;
+  transition: top 200ms ease-in-out,
+  font-size 200ms ease-in-out;
+  pointer-events: none;
+}
+
+.dialog1 .lbl:has( ~ input[type="text"]) {
+  animation: top 300ms ease-in-out;
+  top: 1.5rem;
+  height: 1.2rem;
+}
+
+.dialog1 .file-wrapper {
+  margin: 1rem 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog1 .file {
+  padding: 1rem 0 1rem 1rem;
+  background-color: #C0CFFA;
+  border-radius: 0 2rem 2rem 0;
+  margin-top: 1rem;
+  width: 15rem;
+  transition: width 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.dialog1 .file:hover {
+  width: 80%;
+}
+
+.dialog1 .input {
+  border: none;
+  border-bottom: 1px black solid;
+  max-width: 20rem;
+  padding-top: 1rem;
+}
+
+.dialog1 .file-wrapper .lbl {
+  margin-bottom: .5rem;
+}
+
+.dialog1 .file-wrapper .file {
+  margin: 0;
+}
+
+.dialog1 .training {
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+}
+
+.dialog1 .checkbox-wrapper {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.dialog1 .checkbox {
+  font-family: "Quicksand", sans-serif;
+  width: 1.5rem;
+  aspect-ratio: 1/1;
+  align-self:baseline;
+  margin-right: 1rem;
+}
+
+.dialog1 .checkbox-desc {
+  font-size: .8rem;
+  margin-top: 0;
+}
+
+.dialog1 .lbl:has( ~ .input:placeholder-shown) {
+  top: 2rem;
+}
+
+.dialog1 .lbl:has( ~ .input:focus),
+.dialog1 .lbl:has( ~ .input:not(:placeholder-shown)) {
+  top: .5rem;
+  font-size: 0.9rem;
+}
+
+.dialog1 .textarea {
+  max-width: 30rem;
+}
+
+.dialog1 .submit {
+  width: 10rem;
+  height: 2rem;
+  margin: auto;
+  padding: .3rem;
+  border-radius: 2rem;
+  border: 2px #0d0d0d solid;
+  cursor: pointer;
+  font-weight: 550;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  transition: background-color 200ms ease-in-out,
+  color 200ms ease-in-out;
+}
+
+.dialog1 .submit:hover {
+  background-color: #0d0d0d;
+  color: white;
+}
+
+.dialog1 .backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
+  background-color: #080506c7;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 
 .connect-lbl {
   margin: 20rem 0 0 5rem;
@@ -1271,4 +1527,66 @@ p {
   justify-content: center;
   align-items: center;
   font-weight: 600;
+}
+
+.form-recieved {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  justify-items: center;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 500px) {
+  .form-recieved {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
+
+.form-recieved .lbl {
+  font-size: 3rem;
+  width: 100%;
+  line-height: 100%;
+}
+
+.form-recieved .img-wrapper {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.form-recieved .img {
+  max-width: 15rem;
+  aspect-ratio: 3 / 4;
+}
+
+.form-recieved .content {
+  margin-top: 5rem;
+  flex-direction: column;
+  font-size: 1.2rem;
+  line-height: 180%;
+  box-sizing: border-box;
+  padding: 2rem;
+}
+
+.form-recieved .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-recieved .text {
+  max-width: 50ch;
+  margin-top: 2rem;
+  box-sizing: border-box;
+}
+
+.form-recieved a {
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  text-align: left;
 }
