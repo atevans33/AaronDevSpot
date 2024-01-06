@@ -140,6 +140,13 @@ btn508.addEventListener('click', function() {
     }
     btnPrevious = btn508;
     btnPrevious.setAttribute('aria-expanded', 'true');
+
+    //scroll element into view if on mobile
+    if (window.innerWidth <= 1479) {
+        document.getElementById(
+            btnPrevious.getAttribute('aria-controls')).
+            scrollIntoView({ behavior: "smooth", block: "end"});
+    }
 });
 
 //pdf button
@@ -155,6 +162,13 @@ btnPDF.addEventListener('click', function() {
     }
     btnPrevious = document.getElementById('pdf-btn');
     btnPrevious.setAttribute('aria-expanded', 'true');
+
+    //scroll element into view if on mobile
+    if (window.innerWidth <= 1479) {
+        document.getElementById(
+            btnPrevious.getAttribute('aria-controls')).
+            scrollIntoView({ behavior: "smooth", block: "end"});
+    }
 });
 
 //Word button
@@ -170,6 +184,13 @@ btnWord.addEventListener('click', function() {
     }
     btnPrevious = btnWord;
     btnPrevious.setAttribute('aria-expanded', 'true');
+
+    //scroll element into view if on mobile
+    if (window.innerWidth <= 1479) {
+        document.getElementById(
+            btnPrevious.getAttribute('aria-controls')).
+            scrollIntoView({ behavior: "smooth", block: "end"});
+    }
 });
 
 //Powerpoint button
@@ -185,6 +206,13 @@ btnPPT.addEventListener('click', function() {
     }
     btnPrevious = btnPPT;
     btnPrevious.setAttribute('aria-expanded', 'true');
+
+    //scroll element into view if on mobile
+    if (window.innerWidth <= 1479) {
+        document.getElementById(
+            btnPrevious.getAttribute('aria-controls')).
+            scrollIntoView({ behavior: "smooth", block: "end"});
+    }
 });
 
 //video button
@@ -200,14 +228,34 @@ btnVid.addEventListener('click', function() {
     }
     btnPrevious = btnVid;
     btnPrevious.setAttribute('aria-expanded', 'true');
+
+    //scroll element into view if on mobile
+    if (window.innerWidth <= 1479) {
+        document.getElementById(
+            btnPrevious.getAttribute('aria-controls')).
+            scrollIntoView({ behavior: "smooth", block: "end"});
+    }
 });
 
 /*
-    Update Portfolio image depending on screen orientation and size
+    contact button for file remediation
 */
-window.onload(function () {
-    //if screen is 736px or less and in portrait mode...
-    if (window.innerWidth <= 736 && (window.innerWidth < window.innerHeight)) {
-        
-    }
+var contact_buttons = document.querySelectorAll('.contact');
+contact_buttons.forEach( element => {
+    element.addEventListener('click', function() {
+        document.getElementById('contact-dialog').classList.add('display');
+    });
+});
+
+/*
+    Exit buttons for modal dialogs
+*/
+//contact modal
+var modal1_exit = document.getElementById('dialog1-exit');
+modal1_exit.addEventListener('click', function() {
+    document.getElementById('contact-dialog').classList.remove('display');
+});
+var modal1_backdrop = document.getElementById('dialog1-backdrop');
+modal1_backdrop.addEventListener('click', function() {
+    document.getElementById('contact-dialog').classList.remove('display');
 });
