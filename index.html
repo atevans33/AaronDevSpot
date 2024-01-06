@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Aaron's Web Services</title>
     <script defer src="/docs/assets/scripts/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/docs/assets/style/style.css">
 </head>
 <body>
+    <!-- Skip to main content -->
+    <a class="skip-content" href="#bio-region"><span class="link">Skip to Main Content</span></a>
     <!-- Navigation Region -->
     <nav class="nav" role="navigation">
         <div class="nav-wrapper">
@@ -86,13 +88,10 @@
             <div class="wrapper IO-el">
                 <h2 id="bio-lbl" class="bio-lbl lbl">Hi, I'm Aaron</h2>
                 <p id="bio-desc" class="bio-desc">I am a web developer and a digital accessibility specialist</p>
-                <p class="bio-desc">I design beautiful and robust websites with their own identity. My philosophy is that
-                    websites are only as beautiful as they are usable. Whether a
-                    costumer
-                    belongs
+                <p class="bio-desc">I design beautiful and robust websites with their own identity. Websites are only as beautiful as
+                    they are usable. Whether a costumer belongs
                     to the community of 1 in 4 US adults who have a disability or share anything else that requires a unique
-                    experience
-                    online, I’ll ensure your website can accommodate them and earn their trust.
+                    experience online, I’ll ensure your website can accommodate them and earn their trust.
                 </p>
             </div>
         </div>
@@ -151,19 +150,19 @@
         <h2 id="portf-lbl" class="portf-lbl">Portfolio Websites</h2>
         <ul class="content" aria-labelledby="portf-lbl">
             <li class="screen-card card1">
-                <p class="text">View the Music Portfolio Site</p>
-                <a href="" aria-label="Music Portfolio Website.">
+                <a class="website-link" href="" aria-label="Go to Music Portfolio Website." target="_blank" rel="noopener noreferrer"><p class="text">View the Music Portfolio Site</p>
+                
                     <video class="video" src="/docs/assets/videos/music-site.mp4" type="video/mp4" muted class="vid" loop></video>
-                    <img class="img" src="/docs/assets/images/music-portf-website-m.PNG" alt="Go to music portfolio website.">
+                    <img class="img" src="/docs/assets/images/music-portf-website-m.PNG" alt="">
                 </a>
             </li>
             <li class="screen-card card2">
-                <a href="" aria-label="Real Estate Portfolio Website.">
+                <a href="" aria-label="Real Estate Portfolio Website." target="_blank" rel="noopener noreferrer">
                     <img class="img" src="" alt="">
                 </a>
             </li>
             <li class="screen-card card3">
-                <a href="" aria-label="Bakery Portfolio Website.">
+                <a href="" aria-label="Bakery Portfolio Website." target="_blank" rel="noopener noreferrer">
                     <img class="img" src="" alt="">
                 </a>
             </li>
@@ -176,8 +175,7 @@
                     <h2 id="access-lbl" class="access-lbl">Digital Accessibility</h2>
                     <div class="access-desc">
                         <p>
-                            Click the highlighted buttons to see visual examples of the Digital Accessibility and the
-                            remediation
+                            Click the highlighted buttons below to see visual examples of the remediation
                             work that I
                             offer.
                         </p>
@@ -187,11 +185,7 @@
                             are
                             accessible. I have remediated thousands of documents to meet <span id="508-btn" role="button"
                                 tabindex="0" class="example-btn" aria-expanded="true" aria-controls="accordian-access">Section
-                                508</span> standards. Many of these
-                            have been
-                            in
-                            the realm of education and real estate, ensuring a company’s digital presence is protected and
-                            accessible.
+                                508</span> standards.
                             Whether it’s <span id="pdf-btn" role="button" tabindex="0" class="example-btn" aria-expanded="false"
                                 aria-controls="accordian-access">PDFs</span>, <span id="word-btn" role="button" tabindex="0"
                                 class="example-btn" aria-expanded="false" aria-controls="accordian-access">Word
@@ -203,7 +197,7 @@
                         </p>
                         <p class="text1">
                             I offer synchronous and
-                            asynchronous training for document remediation
+                            asynchronous training for content remediation
                             . Trainings come with reference documents and/ or webpages for later use by trained individuals.
                         </p>
                     </div>
@@ -238,7 +232,7 @@
                         <div class="btn-container">
                             <a id="open-file" class="open link" href="/docs/assets/files/resume-2023.pdf"
                                 target="_blank" rel="noopener noreferrer">Open Example PDF</a>
-                            <button id="contact2" class="contact btn">Get My File Fixed</button>
+                            <button id="contact2" class="contact btn" type="button">Get My File Fixed</button>
                         </div>
                     </div>
                 </div>
@@ -270,8 +264,6 @@
                                 </p>
                         </div>
                         <div class="btn-container">
-                            <a id="open-file" class="open link" href="https://www.section508.gov/manage/laws-and-policies/"
-                                target="_blank" rel="noopener noreferrer">Download Example PPT</a>
                             <button id="contact2" class="contact btn">Get My File Fixed</button>
                         </div>
                     </div>
@@ -289,7 +281,7 @@
                                     Difference between closed captioning and open captioning</a>.</p>
                             </div>
                         <div class="btn-container">
-                            <a id="open-file" class="open link" href="https://www.section508.gov/manage/laws-and-policies/"
+                            <a id="open-file" class="open link" href="https://youtu.be/1oLInDwaxgE"
                                 target="_blank" rel="noopener noreferrer">Open Example Video</a>
                             <button id="contact2" class="contact btn">Get My Video Fixed</button>
                         </div>
@@ -297,21 +289,68 @@
                 </div>
             </div>
         </div>
+        <dialog id="contact-dialog" class="dialog1" aria-labelledby="dialog1-lbl" aria-describedby="dialog1-desc"
+            aria-modal="true">
+            <div id="dialog1-backdrop" class="backdrop"></div>
+            <div class="dialog1-content">
+                <button type="button" class="exit" id="dialog1-exit">
+                    <svg class="svg" viewbox="0 0 100 100">
+                        <line class="line up-to-down" x1="10" x2="90" y1="10" y2="90" stroke="black" stroke-width="5"
+                            stroke-linecap="round" stroke-dashoffset="0"></line>
+                        <line class="line down-to-up" x1="10" x2="90" y1="90" y2="10" stroke="black" stroke-width="5"
+                            stroke-linecap="round" stroke-dashoffset="0"></line>
+                    </svg>
+                    <span class="hide-visually">Exit</span></button>
+                <h3 id="dialog1-lbl" class="dialog-lbl">Let's get your<br> content accessible</h3>
+                <p id="dialog1-desc" class="desc">Please fill out the form and I will contact you for any additional details,
+                    expectations, and about pricing
+                </p>
+                <p class="text">Fields with an <span aria-hidden="true">(*)</span> are required.</p>
+                <form role="form" class="form" action="https://formsubmit.co/atevans33@gmail.com" method="POST"
+                enctype="multipart/form-data">
+                    <label class="lbl" for="name1">Name<span aria-hidden="true">*</span></label>
+                    <input class="input" type="text" name="name1" placeholder="" required>
+                    <label class="lbl" for="email1">Email<span aria-hidden="true">*</span></label>
+                    <input class="input" type="text" name="email1" placeholder="" required>
+                    <div class="file-wrapper">
+                        <label class="lbl" for="file">File to remediate or similar</label>
+                        <input class="file" type="file" name="file" accept=".mp4,.pdf,.ppt,.doc,.docx,.mov,.avi,">
+                    </div>
+                    <label class="lbl" for="dialog1-textarea">Additional details and comments<span aria-hidden="true">*</span></label>
+                    <textarea class="textarea" type="text" name="dialog1-textarea" rows="8" placeholder="Comments..." required></textarea>
+                    <label class="lbl training" for="dialog1-checkbox">Training</label>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox" name="dialog1-checkbox" aria-describedby="dialog1-checkbox-desc">
+                        <p id="dialog1-checkbox-desc" class="checkbox-desc">I am interested in recieving
+                            accessibility training</p>
+                    </div>
+                    <input class="submit" type="submit" value="Submit">
+                    <input type="hidden" name="_subject" value="New Submission for File Remediation">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="/pages/thankyou.html">
+                </form>
+            </div>
+        </dialog>
     </div>
     <div id="connect-region" class="connect-region" aria-labelledby="connect-lbl">
         <h2 id="connect-lbl" class="connect-lbl">Let's Connect</h2>
         <div class="content">
-            <form role="form" class="form" action="mailto:atevans33@gmail.com" method="post" enctype="text/plain"
-                aria-labelledby="connect-lbl">
-                <label class="lbl" for="name" required>Name<span aria-hidden="true">*</span></label>
-                <input class="input" type="text" id="name" placeholder="John Doe">
-                <label class="lbl" for="email" required>Email<span aria-hidden="true">*</span></label>
-                <input class="input" type="text" id="email" placeholder="email@address.com">
+            <form role="form" class="form" action="https://formsubmit.co/atevans33@gmail.com" method="POST"
+                enctype="multipart/form-data" aria-labelledby="connect-lbl">
+                <label class="lbl" for="name2">Name<span aria-hidden="true">*</span></label>
+                <input class="input" type="text" name="name2" placeholder="John Doe" required>
+                <label class="lbl" for="email">Email<span aria-hidden="true">*</span></label>
+                <input class="input" type="text" name="email" placeholder="email@address.com" required>
                 <label class="lbl" for="phone">Phone</label>
-                <input class="input" type="tel" id="phone" placeholder="555 555 5555">
-                <label class="lbl" for="project" required>What are we working on?<span aria-hidden="true">*</span></label>
-                <textarea class="input input3" type="text" id="project" rows="8" placeholder="I want to create..."></textarea>
+                <input class="input" type="tel" name="phone" placeholder="555 555 5555">
+                <label class="lbl" for="project">What are we working on?<span aria-hidden="true">*</span></label>
+                <textarea class="input input3" type="text" rows="8" name="project" placeholder="I want to create..."></textarea>
                 <input class="submit" type="submit" value="Submit">
+                <input type="hidden" name="_subject" value="New Submission for Web Development">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="/pages/thankyou.html">
             </form>
         </div>
     </div>
