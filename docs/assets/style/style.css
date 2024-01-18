@@ -889,7 +889,7 @@ p {
   }
 }
 
-.card1 .video {
+.screen-card .video {
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -901,24 +901,67 @@ p {
 .screen-card .text {
   margin-bottom: 2rem;
   text-align: center;
+  max-width: 60vw;
+  line-height: 180%;
 }
 
-.card1 .img {
+.screen-card .phone-camera-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.screen-card .phone-camera {
+  height: 15px;
+  width: 30%;
+  background-color: black;
+  border-radius: 0 0 9px 9px;
+}
+
+.screen-card a {
+  position: relative;
+}
+@media screen and (max-width: 736px) and (orientation: portrait) {
+  .screen-card a {
+    display: block;
+    border-radius: 1.5rem;
+  border: 3px black solid;
+  padding: 1px;
+  background-color: black;
+  }
+}
+
+.screen-card .img {
  width: 60vw;
  aspect-ratio: 9/16;
  box-shadow: 0px 0px 27px 3px rgba(0, 0, 0, 0.75);
  display: none;
- border-radius: 1.5rem;
+ border-radius: 1.3rem;
+ padding-top: 3rem;
 }
 @media screen and (max-width: 736px) and (orientation: portrait) {
-  .card1 .img {
+  .screen-card .img {
     display: block;
   }
 }
 
+.card1 .img {
+  background-color: #E8D8D1;
+}
 
 .card2 {
-  background-color: rgb(81, 81, 226);
+  background-color: #804433;
+}
+
+.card2 .text {
+  color: white;
+}
+
+.card2 .img {
+  background-color: #F9F9F9;
 }
 
 .card3 {
