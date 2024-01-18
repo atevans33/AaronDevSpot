@@ -3,179 +3,364 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Home Page</title>
+    <title>Aaron's Web Services</title>
+    <script defer src="/docs/assets/scripts/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/docs/assets/style/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/2e1a3a050b.js" crossorigin="anonymous"></script>
-    <script defer src="/docs/assets/scripts/code.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Laila:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Parisienne&family=Quicksand:wght@300;400;500;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Archivo+Black&family=Laila:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Parisienne&family=Quicksand:wght@300;400;500;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head> 
-<body id="body-index" record="0">
-    <div class="disable-anim-btn-wrapper">
-    <button id="anim-disable-btn" aria-pressed="false">Disable Animation</button>
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a class="skip-content" href="#bio-region"><span class="link">Skip to Main Content</span></a>
+    <!-- Navigation Region -->
+    <nav class="nav" role="navigation">
+        <div class="nav-wrapper">
+            <div class="author">
+                <img class="img" src="/docs/assets/images/aaron-pfp.jpg" alt="">
+                <p class="text">Aaron Evans</p>
+            </div>
+            <div class="nav-content">
+                <button class="hamburger-1 hamburger-index" aria-expanded="false" role="Menu button." id="menu">
+                    <!--background for open nav on tablet/mobile-->
+                    <div class="circle-background"></div>
+                    <svg class="svg" viewbox="0 0 100 100">
+                        <line class="line top" x1="90" x2="10" y1="25" y2="25" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
+                        <line class="line mid" x1="10" x2="90" y1="50" y2="50" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
+                        <line class="line bot" x1="10" x2="90" y1="75" y2="75" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0">
+                        </line>
+                    </svg>
+                    <span id="menu-lbl" class="hide-visually">Menu</span>
+                </button>
+                <ul id="menu-list" class="menu" aria-labelledby="menu-lbl">
+                    <li><a id="navlink1" class="link link1" href="#bio-region">About Me</a></li>
+                    <li><a id="navlink2" class="link link2" href="#portf-region">Portfolio</a></li>
+                    <li><a id="navlink3" class="btn link3" href="#connect-region">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Heading Section -->
+    <div role="region" class="heading-section" aria-labelledby="heading-lbl" aria-describedby="heading-desc1">
+        <div id="lbl-wrapper" class="lbl-wrapper">
+            <h1 id="heading-lbl" class="heading-lbl" aria-label="A Web For Everyone">
+                <span class="lbl-line"><span>A Web For</span></span><br>
+                <span class="lbl-line line2"><span>Everyone</span></span>
+            </h1>
+            <p id="dec-four" class="decorative-four" aria-hidden="true"><span class="lbl-line line2"><span>#4</span></span></p>
+        </div>
+        <div class="desc-section">
+            <div class="content">
+                <p id="heading-desc1" class="heading-desc"><span>Web Development and Digital Accessibility</span></p>
+                <p id="heading-desc2" class="heading-desc2"><span>Design With Purpose</span></p>
+                <div class="lines" aria-hidden="true">
+                    <div class="line">
+                        <hr>
+                    </div>
+                    <div class="line">
+                        <hr>
+                    </div>
+                    <div class="line">
+                        <hr>
+                    </div>
+                    <div class="line">
+                        <hr>
+                    </div>
+                    <div class="line">
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <header>
-        <nav class="nav-nontraditional" id="nav-1" role="navigation">
-            <button class="hamburger-1 hamburger-index" aria-expanded="false" role="Menu button." id="menu">
-                <!--background for open nav on tablet/mobile-->
-                <div class="circle-background"></div>
-                <svg class="svg" viewbox="0 0 100 100">
-                    <line class="line top" x1="90" x2="10" y1="25" y2="25" stroke="black" stroke-width="10"
-                        stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
-                    <line class="line mid" x1="10" x2="90" y1="50" y2="50" stroke="black" stroke-width="10"
-                        stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
-                    <line class="line bot" x1="10" x2="90" y1="75" y2="75" stroke="black" stroke-width="10"
-                        stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0">
-                    </line>
-                </svg>
-            </button>
-            <ul class="nav-links">
-                <li class="nav-link"><a class="text" href="#">Shop<div class="underline" aria-hidden="true">Shop</div></a></li>
-                <li class="nav-link">
-                    <button class="text" aria-pressed="false" id="music-btn">Music<div class="underline"
-                    aria-hidden="true">Music</div>
-                    </button></li>
-                <li class="nav-link">
-                    <a class="text" href="#">About<div class="underline" aria-hidden="true">About</div></a>
-                </li>
-                <li class="nav-link">
-                    <a class="text" href="/flowetry.html">Flowetry<div class="underline" aria-hidden="true">
-                    Flowetry</div></a></li>
-                <li class="nav-button nav-link">
-                    <button class="subscribe-button text" aria-pressed="false" aria-label="subscribe to mailing list"
-                    aria-haspopup="dialog" id="subscribe-btn" aria-controls="record-slider">Subscribe<div class="underline" aria-hidden="true">Subscribe
-                    </div></button>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main class="main">
-        <div class="wrapper-slider">
-       <div id="record-slider" class="record-slider record-1" title="Music Slider" aria-expanded="false">
-        <div class="records-container rotate" id="records-container">
-            <!-- 8pm -->
-            <div class="record-element record-1" displayed="false" aria-label="Song 1 of 8">
-                <img class="img" src="/docs/assets/img/8pm.png" alt="Lighthouse Love Album">  
-            </div>
-            <!-- Godless Woman -->
-            <div class="record-element record-2" displayed="false" aria-label="Song 2 of 8">
-                <img class="img" src="/docs/assets/img/godless-woman.png" alt="Private Jet Album">
-            </div>
-            <!-- Flaming -->
-            <div class="record-element record-3" displayed="false" aria-label="Song 3 of 8">
-                <img class="img" src="/docs/assets/img/flaming.png" alt="Miniature People Album">
-            </div>
-            <!-- Memories -->
-            <div class="record-element record-4" displayed="false" aria-label="Song 4 of 8">
-                <img class="img" src="/docs/assets/img/memories.png" alt="Just Above Water Album">
-            </div>
-            <!-- Dust -->
-            <div class="record-element record-5" displayed="false" aria-label="Song 5 of 8">
-                <img class="img" src="/docs/assets/img/dust.png" alt="Sick Leave Album">
-            </div>
-            <!-- Party -->
-            <div class="record-element record-6" displayed="false" aria-label="Song 6 of 8">
-                <img class="img" src="/docs/assets/img/party.png" alt="End of the Tunnel Album">
-            </div>
-            <!-- Relapsing -->
-            <div class="record-element record-7" displayed="false" aria-label="Song 7 of 8">
-                <img class="img" src="/docs/assets/img/relapsing.png" alt="Spiffeon Album">
-            </div>
-            <!-- Garden -->
-            <div class="record-element record-8" displayed="false" aria-label="Song 8 of 8">
-                <img class="img" src="/docs/assets/img/garden.png" alt="Sunflower Album">
+    <!-- Half scrolling section -->
+    <div class="about-me-section">
+        <div class="left-region">
+            <div class="image-wrapper IO-el">
+                <img class="img" src="/docs/assets/images/aaron-full2.jpg" alt="Aaron Evans at the Washington Monument">
             </div>
         </div>
+        <div role="region" id="bio-region" class="bio-region region" aria-labelledby="bio-lbl" aria-describedby="bio-desc">
+            <div class="wrapper IO-el">
+                <h2 id="bio-lbl" class="bio-lbl lbl">Hi, I'm Aaron</h2>
+                <p id="bio-desc" class="bio-desc">I am a web developer and a digital accessibility specialist</p>
+                <p class="bio-desc">I design beautiful and robust websites with their own identity. Websites are only as beautiful as
+                    they are usable. Whether a costumer belongs
+                    to the community of 1 in 4 US adults who have a disability or share anything else that requires a unique
+                    experience online, I’ll ensure your website can accommodate them and earn their trust.
+                </p>
+            </div>
         </div>
-        <!-- buttons for record slider -->
-        <div class="record-buttons" id="slider-controls" visible="false">
-            <div class="volume-exit-buttons">
-                <button class="btn exit" id="exit-slider" tabindex="0"><i class="fa-solid fa-xmark"></i></button>
-                <button class="btn mute1" aria-pressed="false" id="mute-index"><i class="fa-solid fa-music"></i>
-                <div class="box"><div class="slash"></div></div></button>
-            </div>
-            <div class="record-selection-wrapper">
-                <button class="btn btn-prev"><i class="fa-solid fa-chevron-left"></i></button>
-                <p class="song-title" id="album-title" aria-live="polite">Lighthouse Love</p>
-                <button class="btn btn-next"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
-            <div class="record-content">
-                <ul title="Song links for Music Services" class="song-links">
-                    <li class="link link-1">
-                        <a href="#" aria-label="Song link to Spotify.">
-                            <i class="fa-brands fa-spotify"></i>
-                            <span class="text"> Spotify</span>
-                        </a>
+        <div role="region" class="skills-region region">
+            <div class="wrapper IO-el">
+                <h2 id="skills-lbl" class="skills-lbl lbl">Skills / Expertise</h2>
+                <ul class="skills-list" aria-labelledby="skills-lbl">
+                    <li class="item">
+                        <img class="img" src="/docs/assets/images/html-logo-1.png" alt="">
+                        <p class="text">HTML</p>
                     </li>
-                    <li class="link link-2">
-                        <a href="#" aria-label="Song link to Apple Music.">
-                            <i class="fa-brands fa-apple" aria-label="Apple"></i>
-                            <span class="text"> Music</span>
-                        </a>
+                    <li class="item">
+                        <img class="img" src="/docs/assets/images/css-logo-1.png" alt="">
+                        <p class="text">CSS / SCSS</p>
                     </li>
-                    <li class="link link-3">
-                        <a href="#" aria-label="Song link to Sondcloud.">
-                            <i class="fa-brands fa-soundcloud"></i>
-                            <span class="text"> SoundCloud</span>
-                        </a>
+                    <li class="item">
+                        <img class="img" src="/docs/assets/images/javascript-logo-1.png" alt="">
+                        <p class="text">Javascript</p>
                     </li>
-                    <li class="link link-4">
-                        <a href="#" aria-label="Song link to Youtube Music.">
-                            <i class="fa-brands fa-youtube" aria-label="YouTube"></i>
-                            <span class="text"> Music</span>
-                        </a>
+                    <li class="item">
+                        <img class="img" src="/docs/assets/images/w3c-icon-bleached.png" alt="">
+                        <p class="text">WCAG</p>
+                    </li>
+                    <li class="item">
+                        <img class="img" src="/docs/assets/images/508-logo-bleached.png" alt="">
+                        <p class="text">Section 508</p>
                     </li>
                 </ul>
             </div>
         </div>
-    </div>
-    <audio id="audio-index">
-        <source src="/docs/assets/audio/8pm.mp3" type="audio/mpeg">
-      </audio>
-    <dialog class="subscribe-modal hide" role="dialog" id="dialog1" 
-    aria-labelledby="dialog1-label" aria-describedby="dialog1-desc"
-    aria-modal="true">
-    <div class="modal-backdrop"></div>
-        <div class="container">
-            <button class="exit-btn" id="exit-dialog1"><i class="fa-solid fa-xmark"></i><span class="hide-text">Exit Dialog.</span></button>
-            <h3 class="heading" id="dialog1-label">Join The Artist's Crew</h3>
-            <p class="desc" id="dialog1-desc">Subscribe to recieve updates from this artist</p>
-            <div class="wrapper">
-                <label class="lbl" for="email">First Name</label>
-                <input class="input" type="email" id="fname" name="First Name." placeholder="Please Enter First Name">
+        <div role="region" class="cert-region region" aria-labelledby="cert-lbl">
+            <div class="wrapper IO-el">
+                <h2 id="cert-lbl" class="lbl">Certifications</h2>
+                <div class="certifications">
+                    <div class="cert">
+                        <img class="img1" src="/docs/assets/images/w3c-icon.png" alt="">
+                        <img class="img2" src="/docs/assets/images/certification-clipart.png" alt="">
+                        <p>
+                            <span class="name">Web Accessibility</span><br>
+                            <span class="source">EDx</span>
+                        </p>
+                    </div>
+                    <div class="cert">
+                        <img class="img1" src="/docs/assets/images/508-logo.png" alt="">
+                        <img class="img2" src="/docs/assets/images/certification-clipart.png" alt="">
+                        <p>
+                            <span class="name">Trusted Tester</span><br>
+                            <span class="source">Department of Homeland Security</span>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="wrapper">
-            <label class="lbl" for="email">Last Name</label>
-            <input class="input" type="text" id="lname" name="Last Name." placeholder="Please Enter Last Name">
-            </div>
-            <div class="wrapper">
-            <label class="lbl" for="email">Email</label>
-            <input class="input" type="text" id="email" name="Email" placeholder="Please Enter Email">
-            </div>
-            <button class="submit-button btn" type="submit">Subscribe</button>
         </div>
-    </dialog>
-    </main>
-    <footer class="footer" id="footer">
-        <div class="logo-container">
-            <!--<img src="/img/logo/generic-logo.png" height="auto" width="100%">-->
-        </div>
-        <div class="socials-wrapper">
-            <h3 class="heading">Find more of this music artist</h3>
-        <ul class="social-links">
-            <li class="link left" aria-label="Find mroe music on Apple."><a href="#"><i class="fa-brands fa-apple"></i></a></li>
-            <li class="link" aria-label="Find more music on Spotify."><a href="#"><i class="fa-brands fa-spotify"></i></a></li>
-            <li class="link" aria-label="Follow us on Instagram."><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-            <li class="link" aria-label="Find more music on YouTube."><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-            <li class="link" aria-label="Join our discord server."><a href="#"><i class="fa-brands fa-discord"></i></a></li>
-            <li class="link right" aria-label="Follow us on TikTok"><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+    </div>  
+    <div id="portf-region" class="portf-region" aria-labelledby="portf-lbl">
+        <h2 id="portf-lbl" class="portf-lbl">Portfolio Websites</h2>
+        <ul class="content" aria-labelledby="portf-lbl">
+            <li class="screen-card card1">
+            <p class="text">View the Music Portfolio Site</p>
+                <a class="website-link" href="https://atevans33.github.io/MusicSitePortfolio/" aria-label="Go to Music Portfolio Website." target="_blank" rel="noopener noreferrer">  
+                    <div class="phone-camera-wrapper">
+                        <div class="phone-camera"></div>
+                    </div>
+                    <video class="video" src="/docs/assets/videos/music-site.mp4" type="video/mp4" muted class="vid" loop></video>
+                    <img class="img" src="/docs/assets/images/music-portf-website-m.PNG" alt="">
+                </a>
+            </li>
+            <li class="screen-card card2">
+                <p class="text">View the Black Timber Real Estate Portfolio Site</p>
+                <a class="website-link" href="https://blacktimberestate.wordpress.com/" aria-label="Go to Black Timber Real Estate Portfolio Website." target="_blank" rel="noopener noreferrer">
+                    <div class="phone-camera-wrapper">
+                        <div class="phone-camera"></div>
+                    </div>
+                    <video class="video" src="/docs/assets/videos/blacktimber.mp4" type="video/mp4" muted class="vid" loop></video>
+                    <img class="img" src="/docs/assets/images/black-timber-mobile.PNG" alt="">
+                </a>
+            </li>
+            <!-- <li class="screen-card card3">
+                <a href="" aria-label="Bakery Portfolio Website." target="_blank" rel="noopener noreferrer">
+                    <img class="img" src="" alt="">
+                </a>
+            </li> -->
         </ul>
     </div>
-    </footer>
+    <div role="region" class="access-region" aria-labelledby="access-lbl">
+        <div class="wrapper">
+            <div class="content">
+                <div class="container">
+                    <h2 id="access-lbl" class="access-lbl">Digital Accessibility</h2>
+                    <div class="access-desc">
+                        <p>
+                            Click the highlighted buttons below to see visual examples of the remediation
+                            work that I
+                            offer.
+                        </p>
+                        <p>
+                            With up to a quarter of US adults having some sort of disability, it's important to ensure your web
+                            documents
+                            are
+                            accessible. I have remediated thousands of documents to meet <span id="508-btn" role="button"
+                                tabindex="0" class="example-btn" aria-expanded="true" aria-controls="accordian-access">Section
+                                508</span> standards.
+                            Whether it’s <span id="pdf-btn" role="button" tabindex="0" class="example-btn" aria-expanded="false"
+                                aria-controls="accordian-access">PDFs</span>, <span id="word-btn" role="button" tabindex="0"
+                                class="example-btn" aria-expanded="false" aria-controls="accordian-access">Word
+                                Documents</span>, <span id="ppt-btn" role="button" tabindex="0" class="example-btn"
+                                aria-expanded="false" aria-controls="accordian-access">PowerPoints</span>, or <span id="vid-btn"
+                                role="button" tabindex="0" class="example-btn" aria-expanded="false"
+                                aria-controls="accordian-access">videos</span>, your content will be accessible and
+                            usable.
+                        </p>
+                        <p class="text1">
+                            I offer synchronous and
+                            asynchronous training for content remediation. 
+                            Trainings come with reference documents and/ or webpages for later use by trained individuals.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 508 Example Card -->
+            <div id="accordian-access" class="accordian" role="region" aria-label="Accessibility Services Information.">
+                <div id="508" class="example section-508 display">
+                    <div class="example-content">
+                        <div class="description">
+                            <h3 class="heading">What is Section 508?</h3>
+                            <p class="text">In 1998, Congress amended the Rehabilitation Act of 1973 to require federal agencies to make
+                                their electronic and information technology (EIT) accessible to people with disabilities. The law applies to
+                                all federal agencies when they develop, procure, maintain, or use electronic
+                                and information technology. </p>
+                        </div>
+                        <div class="btn-container">
+                            <a id="open-link" class="open link display"
+                                href="https://www.section508.gov/manage/laws-and-policies/#:~:text=In%201998%2C%20Congress%20amended%20the%20Rehabilitation%20Act%20of%201973%20to%20require%20federal%20agencies%20to%20make%20their%20electronic%20and%20information%20technology%20(EIT)%20accessible%20to%20people%20with%20disabilities."
+                                target="_blank" rel="noopener noreferrer">Learn about Section 508</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Adobe Remediation Example Card -->
+                <div id="adobe" class="example adobe">
+                    <div class="example-content">
+                        <div class="description">
+                            <h3 class="heading">Adobe Remediation</h3>
+                            <p class="text">I have remediated thousands of PDFs and tens of thousands of pages.<br><br>
+                                I am proficient with all PDF file types including fillable forms and graphic.</p>
+                        </div>
+                        <div class="btn-container">
+                            <a id="open-file" class="open link" href="/docs/assets/files/resume-2023.pdf"
+                                target="_blank" rel="noopener noreferrer">Open Example PDF</a>
+                            <button id="contact2" class="contact btn" type="button">Get My File Fixed</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Word Remediation Example Card -->
+                <div id="word" class="example word">
+                    <div class="example-content">
+                        <div class="description">
+                            <h3 class="heading">Word Doc Remediation</h3>
+                            <p class="text">I am proficient in remediation with all Microsoft Office Apps, especially Word.<br><br> Despite common
+                                beliefs, the built-in accessibilty checker isn’t
+                                enough to check for full accessibility. I perform both automatic and manual accessibility checks for issues not
+                                recognizable by current Microsoft accessibility checkers.</p>
+                        </div>
+                        <div class="btn-container">
+                            <a id="open-file" class="open link" href="/docs/assets/files/resume-2023.docx"
+                                target="_blank" rel="noopener noreferrer">Download Example Word</a>
+                            <button id="contact2" class="contact btn">Get My File Fixed</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Powerpoint Example Card -->
+                <div id="ppt" class="example ppt">
+                    <div class="example-content">
+                        <div class="description">
+                            <h3 class="heading">Powerpoint Remediation</h3>
+                            <p class="text">Most accessibility issues with PowerPoint remediation stems from the visual side. Color contrast, font,
+                                layout for cognitive disabilities, etc.
+                                I check for all of these, alongside traditional accessibility issues. 
+                                </p>
+                        </div>
+                        <div class="btn-container">
+                            <button id="contact2" class="contact btn">Get My File Fixed</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Closed Captioning Example Card -->
+                <div id="video" class="example video">
+                    <div class="example-content">
+                        <div class="description">
+                            <h3 class="heading">Video Captioning</h3>
+                            <p class="text">I remediate and assist in setting up either closed
+                                or open captioning for your videos.<br><br> See the article below by the University of Washington to know the
+                                difference and what's best for you.<br><br> <a
+                                    href="https://www.washington.edu/doit/what-difference-between-open-and-closed-captioning#:~:text=Captions%20are%20either%20open%20or%20closed.%20Open%20captions%20always%20are%20in%20view%20and%20cannot%20be%20turned%20off%2C%20whereas%20closed%20captions%20can%20be%20turned%20on%20and%20off%20by%20the%20viewer."
+                                    target="_blank" rel="noopener noreferrer">The
+                                    Difference between closed captioning and open captioning</a>.</p>
+                            </div>
+                        <div class="btn-container">
+                            <a id="open-file" class="open link" href="https://youtu.be/1oLInDwaxgE"
+                                target="_blank" rel="noopener noreferrer">Open Example Video</a>
+                            <button id="contact2" class="contact btn">Get My Video Fixed</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <dialog id="contact-dialog" class="dialog1" aria-labelledby="dialog1-lbl" aria-describedby="dialog1-desc"
+            aria-modal="true">
+            <div id="dialog1-backdrop" class="backdrop"></div>
+            <div class="dialog1-content">
+                <button type="button" class="exit" id="dialog1-exit">
+                    <svg class="svg" viewbox="0 0 100 100">
+                        <line class="line up-to-down" x1="10" x2="90" y1="10" y2="90" stroke="black" stroke-width="5"
+                            stroke-linecap="round" stroke-dashoffset="0"></line>
+                        <line class="line down-to-up" x1="10" x2="90" y1="90" y2="10" stroke="black" stroke-width="5"
+                            stroke-linecap="round" stroke-dashoffset="0"></line>
+                    </svg>
+                    <span class="hide-visually">Exit</span></button>
+                <h3 id="dialog1-lbl" class="dialog-lbl">Let's get your<br> content accessible</h3>
+                <p id="dialog1-desc" class="desc">Please fill out the form and I will contact you for any additional details,
+                    expectations, and about pricing
+                </p>
+                <p class="text">Fields with an <span aria-hidden="true">(*)</span> are required.</p>
+                <form role="form" class="form" action="https://formsubmit.co/atevans33@gmail.com" method="POST"
+                enctype="multipart/form-data">
+                    <label class="lbl" for="name1">Name<span aria-hidden="true">*</span></label>
+                    <input class="input" type="text" name="name1" id="name1" placeholder="" required>
+                    <label class="lbl" for="email1">Email<span aria-hidden="true">*</span></label>
+                    <input class="input" type="text" name="email1" id="email1" placeholder="" required>
+                    <div class="file-wrapper">
+                        <label class="lbl" for="file2">File to remediate or similar</label>
+                        <input class="file" type="file" name="file2" id="file2" accept=".mp4,.pdf,.ppt,.doc,.docx,.mov,.avi,">
+                    </div>
+                    <label class="lbl" for="dialog1-textarea">Additional details and comments<span aria-hidden="true">*</span></label>
+                    <textarea class="textarea" type="text" name="dialog1-textarea" id="dialog1-textarea" rows="8" placeholder="Comments..." required></textarea>
+                    <label class="lbl training" for="dialog1-checkbox">Training</label>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox" name="dialog1-checkbox" id="dialog1-checkbox" aria-describedby="dialog1-checkbox-desc">
+                        <p id="dialog1-checkbox-desc" class="checkbox-desc">I am interested in recieving
+                            accessibility training</p>
+                    </div>
+                    <input class="submit" type="submit" value="Submit">
+                    <input type="hidden" name="_subject" value="New Submission for File Remediation">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="/pages/thankyou.html">
+                </form>
+            </div>
+        </dialog>
+    </div>
+    <div id="connect-region" class="connect-region" aria-labelledby="connect-lbl">
+        <h2 id="connect-lbl" class="connect-lbl">Let's Connect</h2>
+        <div class="content">
+            <form role="form" class="form" action="https://formsubmit.co/atevans33@gmail.com" method="POST"
+                enctype="multipart/form-data" aria-labelledby="connect-lbl">
+                <label class="lbl" for="name2">Name<span aria-hidden="true">*</span></label>
+                <input class="input" type="text" name="name2" id="name2" placeholder="John Doe" required>
+                <label class="lbl" for="email">Email<span aria-hidden="true">*</span></label>
+                <input class="input" type="text" name="email" id="email" placeholder="email@address.com" required>
+                <label class="lbl" for="phone">Phone</label>
+                <input class="input" type="tel" name="phone" id="phone" placeholder="555 555 5555">
+                <label class="lbl" for="project">What are we working on?<span aria-hidden="true">*</span></label>
+                <textarea class="input input3" type="text" rows="8" name="project" id="project" placeholder="I want to create..."></textarea>
+                <input class="submit" type="submit" value="Submit">
+                <input type="hidden" name="_subject" value="New Submission for Web Development">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="/pages/thankyou.html">
+            </form>
+        </div>
+    </div>
 </body>
 </html>
