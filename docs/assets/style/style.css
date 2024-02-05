@@ -1732,7 +1732,7 @@ p {
   padding: 5rem;
   z-index: 5;
 }
-@media screen and (max-width: 736px) and (orientation: portrait) {
+@media screen and (max-width: 736px) {
   .contact-grid {
     display: flex;
     flex-direction: column;
@@ -1862,6 +1862,7 @@ p {
 
 .input-wrapper .combo {
   flex-grow: 1;
+  min-width: 187px;
 }
 
 .input-wrapper .combo-input {
