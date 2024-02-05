@@ -87,7 +87,7 @@ var h1 = document.getElementById('heading-lbl');
 var desc1 = document.getElementById('heading-desc1');
 var desc2 = document.getElementById('heading-desc2');
 var decFour = document.getElementById('dec-four');
-var speed = 1.4;//speed of element movement
+var speed = 1.4;//speed of header element movement
 function HeaderScrollAnims() {
     var pos = window.scrollY;//current position
 
@@ -129,7 +129,7 @@ var fileBtn = document.getElementById('open-file');
 var contactBtn = document.getElementById('contact2');
 //section 508 button
 var btn508 = document.getElementById('508-btn');
-btn508.addEventListener('click', function() {
+btn508?.addEventListener('click', function () {
     examplePrevious.classList.remove('display');
     examplePrevious = document.getElementById('508');
     examplePrevious.classList.add('display');
@@ -145,13 +145,13 @@ btn508.addEventListener('click', function() {
     if (window.innerWidth <= 1479) {
         document.getElementById(
             btnPrevious.getAttribute('aria-controls')).
-            scrollIntoView({ behavior: "smooth", block: "end"});
+            scrollIntoView({ behavior: "smooth", block: "end" });
     }
 });
 
 //pdf button
 var btnPDF = document.getElementById('pdf-btn');
-btnPDF.addEventListener('click', function() {
+btnPDF?.addEventListener('click', function() {
     examplePrevious.classList.remove('display');
     examplePrevious = document.getElementById('adobe');
     examplePrevious.classList.add('display');
@@ -173,7 +173,7 @@ btnPDF.addEventListener('click', function() {
 
 //Word button
 var btnWord = document.getElementById('word-btn');
-btnWord.addEventListener('click', function() {
+btnWord?.addEventListener('click', function() {
     examplePrevious.classList.remove('display');
     examplePrevious = document.getElementById('word');
     examplePrevious.classList.add('display');
@@ -195,7 +195,7 @@ btnWord.addEventListener('click', function() {
 
 //Powerpoint button
 var btnPPT = document.getElementById('ppt-btn');
-btnPPT.addEventListener('click', function() {
+btnPPT?.addEventListener('click', function() {
     examplePrevious.classList.remove('display');
     examplePrevious = document.getElementById('ppt');
     examplePrevious.classList.add('display');
@@ -217,7 +217,7 @@ btnPPT.addEventListener('click', function() {
 
 //video button
 var btnVid = document.getElementById('vid-btn');
-btnVid.addEventListener('click', function() {
+btnVid?.addEventListener('click', function() {
     examplePrevious.classList.remove('display');
     examplePrevious = document.getElementById('video');
     examplePrevious.classList.add('display');
@@ -252,10 +252,11 @@ contact_buttons.forEach( element => {
 */
 //contact modal
 var modal1_exit = document.getElementById('dialog1-exit');
-modal1_exit.addEventListener('click', function() {
+modal1_exit?.addEventListener('click', function() {
     document.getElementById('contact-dialog').classList.remove('display');
 });
 var modal1_backdrop = document.getElementById('dialog1-backdrop');
-modal1_backdrop.addEventListener('click', function() {
+modal1_backdrop?.addEventListener('click', function() {
     document.getElementById('contact-dialog').classList.remove('display');
 });
+
