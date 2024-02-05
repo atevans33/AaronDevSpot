@@ -1994,6 +1994,7 @@ p {
   padding-top: 0;
   flex-grow: 1;
   justify-content: end;
+  padding-bottom: 0;
 }
 
 .connect-region .socials-region .region-content {
