@@ -21,7 +21,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-SJNZHSJ17G');
     </script>
 </head>
@@ -53,7 +52,7 @@
                 <ul id="menu-list" class="menu" aria-labelledby="menu-lbl">
                     <li><a id="navlink1" class="link link1" href="#bio-region">About Me</a></li>
                     <li><a id="navlink2" class="link link2" href="#portf-region">Portfolio</a></li>
-                    <li><a id="navlink3" class="btn link3" href="#connect-region">Contact</a></li>
+                    <li><a id="navlink3" class="btn link3" href="https://aarondevspot.com/pages/contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -358,22 +357,45 @@
     <div id="connect-region" class="connect-region" aria-labelledby="connect-lbl">
         <h2 id="connect-lbl" class="connect-lbl">Let's Connect</h2>
         <div class="content">
-            <form role="form" class="form" action="https://formsubmit.co/atevans33@gmail.com" method="POST"
-                enctype="multipart/form-data" aria-labelledby="connect-lbl">
-                <label class="lbl" for="name2">Name<span aria-hidden="true">*</span></label>
-                <input class="input" type="text" name="name2" id="name2" placeholder="John Doe" required>
-                <label class="lbl" for="email">Email<span aria-hidden="true">*</span></label>
-                <input class="input" type="text" name="email" id="email" placeholder="email@address.com" required>
-                <label class="lbl" for="phone">Phone</label>
-                <input class="input" type="tel" name="phone" id="phone" placeholder="555 555 5555">
-                <label class="lbl" for="project">What are we working on?<span aria-hidden="true">*</span></label>
-                <textarea class="input input3" type="text" rows="8" name="project" id="project" placeholder="I want to create..."></textarea>
-                <input class="submit" type="submit" value="Submit">
-                <input type="hidden" name="_subject" value="New Submission for Web Development">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="https://aarondevspot.com/pages/thankyou.html">
-            </form>
+            <div class="wrapper">
+                <div class="flex">
+                    <div class="link-wrapper">
+                        <p class="text">Want to find out more?<br>Let's talk!</p>
+                        <a href="https://aarondevspot.com/pages/contact.html" class="contact-footer">Contact Me</a>
+                    </div>
+                    <region role="region" class="socials-region region" aria-labelledby="contact1-lbl"
+                        aria-describedby="contact1-desc">
+                        <div class="region-content">
+                            <div class="text">
+                                <h2 class="heading" id="contact1-lbl">Find me elsewhere</h2>
+                                <p id="contact1-desc" class="desc">Let's make a web for eveeryone, together.</p>
+                            </div>
+                            <ul class="list flex-list-contact">
+                                <li class="li">
+                                    <a href="https://www.linkedin.com/in/aaron-evans-795a98190/" target="_blank"
+                                        rel="noopener">
+                                        <img src="/docs/assets/images/linkedin-logo.png" alt="">
+                                        <p class="hide-visually">View LinkedIn Profile.</p>
+                                    </a>
+                                </li>
+                                <li class="li">
+                                    <a href="https://www.upwork.com/freelancers/~01740a6b8654c1b6b8?viewMode=1&s=1044578476142100494"
+                                        target="_blank" rel="noopener">
+                                        <img src="/docs/assets/images/upwork-logo.png" alt="">
+                                        <p class="hide-visually">View Upwork Profile.</p>
+                                    </a>
+                                </li>
+                                <li class="li">
+                                    <a href="https://github.com/atevans33/AaronDevSpot" target="_blank" rel="noopener">
+                                        <img src="/docs/assets/images/github-logo.png" alt="">
+                                        <p class="hide-visually">View Github for this website.</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </region>
+                </div>
+            </div>
         </div>
     </div>
 </body>
