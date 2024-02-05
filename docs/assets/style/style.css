@@ -1512,9 +1512,10 @@ p {
   margin: 20rem 0 0 5rem;
   letter-spacing: 4px;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 736px) {
   .connect-lbl {
     margin-left: 1rem;
+    margin-bottom: 1rem;
     font-size: 4rem;
   }
 }
@@ -1986,6 +1987,7 @@ p {
 @media screen and (max-width: 736px) {
   .socials-region {
     justify-content: center;
+    align-items: center;
     text-align: center;
   }
 }
@@ -1995,6 +1997,11 @@ p {
   flex-grow: 1;
   justify-content: end;
   padding-bottom: 0;
+}
+@media screen and (max-width: 736px) {
+  .connect-region .socials-region {
+    justify-content: center;
+  }
 }
 
 .connect-region .socials-region .region-content {
