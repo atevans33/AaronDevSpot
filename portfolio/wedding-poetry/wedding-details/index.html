@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Details | Ruben and Alice</title>
     <!-- stylesheets -->
-    <link rel="stylesheet" href="/docs/assets/style/reset.css">
-    <link rel="stylesheet" href="/docs/assets/style/style.css">
+    <link rel="stylesheet" href="../docs/assets/style/reset.css">
+    <link rel="stylesheet" href="../docs/assets/style/style.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,19 +15,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Parisienne&family=Quicksand:wght@300;400;500;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Laila:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Parisienne&family=Petit+Formal+Script&family=Quicksand:wght@300;400;500;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
     <!-- Javascript -->
     <!-- Tabs Interaction -->
-    <script defer src="/docs/assets/scripts/tabs.js"></script>
+    <script defer src="../docs/assets/scripts/tabs.js"></script>
     <!-- Main Javascript -->
-    <script defer src="/docs/assets/scripts/main.js"></script>
+    <script defer src="../docs/assets/scripts/main.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/docs/assets/images/logo.png">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav" aria-label="Groom's Poetry">
+    <nav id="nav" class="nav" aria-label="Groom's Poetry">
         <div class="wrapper">
             <button id="menu" class="hamburger" aria-controls="nav-list" aria-haspopup="true" aria-expanded="false">
                 <svg class="hamburger-svg" viewbox="0 0 100 100">
-                    <line class="line1" x1="10" y1="25" x2="90" y2="25"/>
+                    <line class="line1" x1="10" y1="25" x2="90" y2="25" />
                     <line class="line2" x1="10" y1="50" x2="90" y2="50" />
                     <line class="line3" x1="10" y1="75" x2="90" y2="75" />
                 </svg>
@@ -37,11 +40,11 @@
             <div id="nav-list" class="nav-content">
                 <ul role="menu" class="nav-list flex-row-center">
                     <li class="nav-list-item" role="none">
-                        <a role="menuitem" href="#">
+                        <a role="menuitem" href="../">
                             Poetry
                         </a>
                     </li>
-                    <li class="nav-list-item current" role="none">
+                    <li class="nav-list-item" role="none">
                         <a role="menuitem" href="#" aria-current="page">
                             Wedding Plan
                         </a>
@@ -51,7 +54,7 @@
                             Photos
                         </a>
                     </li>
-                    <li class="nav-list-item" role="none">
+                    <li class="nav-list-item" role="none" id="rsvp-link">
                         <a role="menuitem" href="#">
                             RSVP
                         </a>
@@ -70,7 +73,7 @@
                         <button role="tab" type="button" id="tab1" aria-selected="true"
                         aria-controls="tabpanel1" class="btn">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/wedding-rings.png" alt="">
+                                <img class="img" src="../docs/assets/images/wedding-rings.png" alt="">
                             </div>
                             <span>Our Story</span>
                         </button>
@@ -79,7 +82,7 @@
                         <button role="tab" type="button" id="tab2" aria-selected="false"
                         aria-controls="tabpanel2" class="btn">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/toast.png" alt="">
+                                <img class="img" src="../docs/assets/images/toast.png" alt="">
                             </div>
                             <span>Wedding Party</span>
                         </button>
@@ -88,7 +91,7 @@
                         <button role="tab" type="button" id="tab3" aria-selected="false"
                         aria-controls="tabpanel3" class="btn">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/wedding-arch.png" alt="">
+                                <img class="img" src="../docs/assets/images/wedding-arch.png" alt="">
                             </div>
                             <span>Wedding</span>
                         </button>
@@ -97,7 +100,7 @@
                         <button role="tab" type="button" id="tab4" aria-selected="false"
                         aria-controls="tabpanel4" class="btn">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/stretching-exercises.png" alt="">
+                                <img class="img" src="../docs/assets/images/stretching-exercises.png" alt="">
                             </div>
                             <span>Things to Do</span>
                         </button>
@@ -106,7 +109,7 @@
                         <button role="tab" type="button" id="tab5" aria-selected="false"
                         aria-controls="tabpanel5" class="btn">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/to-do-list.png" alt="">
+                                <img class="img" src="../docs/assets/images/to-do-list.png" alt="">
                             </div>
                             <span>Itinerary</span>
                         </button>
@@ -115,7 +118,7 @@
                         <button role="tab" type="button" id="tab6" aria-selected="false"
                         aria-controls="tabpanel6" class="btn">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/rsvp.png" alt="">
+                                <img class="img" src="../docs/assets/images/rsvp.png" alt="">
                             </div>
                             <span>RSVP</span>
                         </button>
@@ -164,8 +167,8 @@
                     <h1 id="heading2" class="heading-1">Wedding Party</h1>
                     <p class="desc">Alice and Ruben Guijarro</p>
                     <div class="img-wrapper flex-column-center">
-                        <img class="img img1" src="/docs/assets/images/banner3.png" alt="Alice and Ruben holding hands at the beach">
-                        <img class="img img2" src="/docs/assets/images/portrait1.png" alt="">
+                        <img class="img img1" src="../docs/assets/images/banner3.png" alt="Alice and Ruben holding hands at the beach">
+                        <img class="img img2" src="../docs/assets/images/portrait1.png" alt="">
                     </div>
                 </header>
                 <ul class="container-cards flex-column-center" aria-labelledby="heading2">
@@ -176,7 +179,7 @@
                         </div>
                         <li class="card">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/wedding-party/parents1.jpg" alt="Parents of the Groom.">
+                                <img class="img" src="../docs/assets/images/wedding-party/parents1.jpg" alt="Parents of the Groom.">
                             </div>
                             <p class="title">Parents of the Groom</p>
                             <p class="name">Harper and Joseph  Guijarro</p>
@@ -184,7 +187,7 @@
                         </li>
                         <li class="card">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/wedding-party/parents2.jpg" alt="Parents of the bride.">
+                                <img class="img" src="../docs/assets/images/wedding-party/parents2.jpg" alt="Parents of the bride.">
                             </div>
                             <p class="title">Parents of the Bride</p>
                             <p class="name">Grace and Ryan Edwards</p>
@@ -198,7 +201,7 @@
                         </div>
                         <li class="card">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/wedding-party/sophia-williams.jpg" alt="">
+                                <img class="img" src="../docs/assets/images/wedding-party/sophia-williams.jpg" alt="">
                             </div>
                             <p class="title">Maid of Honor</p>
                             <p class="name">Sophia Williams</p>
@@ -208,7 +211,7 @@
                         </li>
                         <li class="card">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/wedding-party/ava-brown.jpg" alt="">
+                                <img class="img" src="../docs/assets/images/wedding-party/ava-brown.jpg" alt="">
                             </div>
                             <p class="title">Bridesmaid</p>
                             <p class="name">Ava Brown</p>
@@ -218,7 +221,7 @@
                         </li>
                         <li class="card">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/wedding-party/mia-davis.jpg" alt="">
+                                <img class="img" src="../docs/assets/images/wedding-party/mia-davis.jpg" alt="">
                             </div>
                             <p class="title">Bridesmaid</p>
                             <p class="name">Mia Davis</p>
@@ -228,7 +231,7 @@
                         </li>
                         <li class="card">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/wedding-party/isabella-martinez.jpg" alt="">
+                                <img class="img" src="../docs/assets/images/wedding-party/isabella-martinez.jpg" alt="">
                             </div>
                             <p class="title">Bridesmaid</p>
                             <p class="name">Isabella Martinez</p>
@@ -238,7 +241,7 @@
                         </li>
                         <li class="card">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/wedding-party/emily-johnson.jpg" alt="">
+                                <img class="img" src="../docs/assets/images/wedding-party/emily-johnson.jpg" alt="">
                             </div>
                             <p class="title">Bridesmaid</p>
                             <p class="name">Emily Johnson</p>
@@ -255,7 +258,7 @@
                         </div>
                         <li class="card">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/wedding-party/joseph-frasquillo.jpg" alt="">
+                                <img class="img" src="../docs/assets/images/wedding-party/joseph-frasquillo.jpg" alt="">
                             </div>
                             <p class="title">Best Man</p>
                             <p class="name">Joseph Frasquillo</p>
@@ -266,7 +269,7 @@
                         </li>
                         <li class="card">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/wedding-party/joshua-ortiz.jpg" alt="">
+                                <img class="img" src="../docs/assets/images/wedding-party/joshua-ortiz.jpg" alt="">
                             </div>
                             <p class="title">Groomsman</p>
                             <p class="name">Joshua Ortiz</p>
@@ -277,7 +280,7 @@
                         </li>
                         <li class="card">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/wedding-party/chris-white.jpg" alt="">
+                                <img class="img" src="../docs/assets/images/wedding-party/chris-white.jpg" alt="">
                             </div>
                             <p class="title">Groomsman</p>
                             <p class="name">Chris White</p>
@@ -288,7 +291,7 @@
                         </li>
                         <li class="card">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/wedding-party/benjamin-smith.jpg" alt="">
+                                <img class="img" src="../docs/assets/images/wedding-party/benjamin-smith.jpg" alt="">
                             </div>
                             <p class="title">Groomsman</p>
                             <p class="name">Benjamin Smith</p>
@@ -299,7 +302,7 @@
                         </li>
                         <li class="card">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/wedding-party/lucas-thompson.jpg" alt="">
+                                <img class="img" src="../docs/assets/images/wedding-party/lucas-thompson.jpg" alt="">
                             </div>
                             <p class="title">Groomsman</p>
                             <p class="name">Lucas Thompson</p>
@@ -315,7 +318,7 @@
                     <div class="row flex-row">
                         <li class="card">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/wedding-party/t-rex.jpg" alt="">
+                                <img class="img" src="../docs/assets/images/wedding-party/t-rex.jpg" alt="">
                             </div>
                             <p class="title">Bestest Flower Boy</p>
                             <p class="name">T-Rex</p>
@@ -332,7 +335,7 @@
                     <h1 id="heading3" class="heading-1">The Wedding</h1>
                     <p class="desc">March 5th, 2023</p>
                     <div class="img-wrapper flex-column-center">
-                        <img class="img" src="/docs/assets/images/wedding-site.jpg" alt="Alice and Ruben holding hands at the beach">
+                        <img class="img" src="../docs/assets/images/wedding-site.jpg" alt="Alice and Ruben holding hands at the beach">
                     </div>
                 </header>
                 <div class="content flex-center">
@@ -355,7 +358,7 @@
                     <div class="row row1 flex-row">
                         <li class="card">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/horseback-riding.jpg" alt="">
+                                <img class="img" src="../docs/assets/images/horseback-riding.jpg" alt="">
                                 <p class="title">Horseback Riding</p>
                                 <div class="link-wrapper">
                                     <a class="link"  href="https://maliburiders.com/" aria-label="Horseback Riding Details" target="_blank" rel="noopener">More Details</a>
@@ -364,7 +367,7 @@
                         </li>
                         <li class="card">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/hiking.jpg" alt="">
+                                <img class="img" src="../docs/assets/images/hiking.jpg" alt="">
                                 <p class="title">Culver City Hiking</p>
                                 <div class="link-wrapper">
                                     <a class="link"  href="https://www.parks.ca.gov/?page_id=22790" aria-label="Culver City Hiking Details" target="_blank" rel="noopener">More Details</a>
@@ -373,7 +376,7 @@
                         </li>
                         <li class="card">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/santa-monica-pier.jpg" alt="">
+                                <img class="img" src="../docs/assets/images/santa-monica-pier.jpg" alt="">
                                 <p class="title">Santa Monica Pier</p>
                                 <div class="link-wrapper">
                                     <a class="link"  href="https://www.santamonicapier.org/" aria-label="Santa Monica Pier Details" target="_blank" rel="noopener">More Details</a>
@@ -382,7 +385,7 @@
                         </li>
                         <li class="card">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/wende-museum.png" alt="">
+                                <img class="img" src="../docs/assets/images/wende-museum.png" alt="">
                                 <p class="title">Wende Museum</p>
                                 <div class="link-wrapper">
                                     <a class="link"  href="https://wendemuseum.org/"
@@ -392,7 +395,7 @@
                         </li>
                         <li class="card">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/sony-pictures-studio.jpg" alt="">
+                                <img class="img" src="../docs/assets/images/sony-pictures-studio.jpg" alt="">
                                 <p class="title">Sony Pictures Studio Tour</p>
                                 <div class="link-wrapper">
                                     <a class="link"  href="https://www.sonypicturesstudiostours.com/" aria-label="Horseback Riding Details" target="_blank" rel="noopener">More Details</a>
@@ -401,7 +404,7 @@
                         </li>
                         <li class="card">
                             <div class="img-wrapper">
-                                <img class="img" src="/docs/assets/images/crypto-arena.jpg" alt="">
+                                <img class="img" src="../docs/assets/images/crypto-arena.jpg" alt="">
                                 <p class="title">Crypto Arena</p>
                                 <div class="link-wrapper">
                                     <a class="link" href="https://www.cryptoarena.com/" aria-label="Horseback Riding Details" target="_blank" rel="noopener">More Details</a>
