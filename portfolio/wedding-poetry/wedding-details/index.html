@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Details | Ruben and Alice</title>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/docs/assets/style/reset.css">
+    <link rel="stylesheet" href="/docs/assets/style/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Parisienne&family=Quicksand:wght@300;400;500;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Laila:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Parisienne&family=Petit+Formal+Script&family=Quicksand:wght@300;400;500;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Javascript -->
+    <!-- Tabs Interaction -->
+    <script defer src="/docs/assets/scripts/tabs.js"></script>
+    <!-- Main Javascript -->
+    <script defer src="/docs/assets/scripts/main.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" aria-label="Groom's Poetry">
+        <div class="wrapper">
+            <button id="menu" class="hamburger" aria-controls="nav-list" aria-haspopup="true" aria-expanded="false">
+                <svg class="hamburger-svg" viewbox="0 0 100 100">
+                    <line class="line1" x1="10" y1="25" x2="90" y2="25"/>
+                    <line class="line2" x1="10" y1="50" x2="90" y2="50" />
+                    <line class="line3" x1="10" y1="75" x2="90" y2="75" />
+                </svg>
+                <!-- Title for Accessibility -->
+                <span class="hide-visually">Menu</span>
+            </button>
+            <div id="nav-list" class="nav-content">
+                <ul role="menu" class="nav-list flex-row-center">
+                    <li class="nav-list-item" role="none">
+                        <a role="menuitem" href="#">
+                            Poetry
+                        </a>
+                    </li>
+                    <li class="nav-list-item current" role="none">
+                        <a role="menuitem" href="#" aria-current="page">
+                            Wedding Plan
+                        </a>
+                    </li>
+                    <li class="nav-list-item" role="none">
+                        <a role="menuitem" href="#">
+                            Photos
+                        </a>
+                    </li>
+                    <li class="nav-list-item" role="none">
+                        <a role="menuitem" href="#">
+                            RSVP
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Tabs Main Content -->
+    <main class="tabs-main flex-row" aria-label="Wedding Information">
+        <div class="tablist" role="tablist">
+            <!-- Tabs Buttons -->
+            <ul class="tabs flex-column">
+                <div class="container flex-column">
+                    <li>
+                        <button role="tab" type="button" id="tab1" aria-selected="true"
+                        aria-controls="tabpanel1" class="btn">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/wedding-rings.png" alt="">
+                            </div>
+                            <span>Our Story</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button role="tab" type="button" id="tab2" aria-selected="false"
+                        aria-controls="tabpanel2" class="btn">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/toast.png" alt="">
+                            </div>
+                            <span>Wedding Party</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button role="tab" type="button" id="tab3" aria-selected="false"
+                        aria-controls="tabpanel3" class="btn">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/wedding-arch.png" alt="">
+                            </div>
+                            <span>Wedding</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button role="tab" type="button" id="tab4" aria-selected="false"
+                        aria-controls="tabpanel4" class="btn">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/stretching-exercises.png" alt="">
+                            </div>
+                            <span>Things to Do</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button role="tab" type="button" id="tab5" aria-selected="false"
+                        aria-controls="tabpanel5" class="btn">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/to-do-list.png" alt="">
+                            </div>
+                            <span>Itinerary</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button role="tab" type="button" id="tab6" aria-selected="false"
+                        aria-controls="tabpanel6" class="btn">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/rsvp.png" alt="">
+                            </div>
+                            <span>RSVP</span>
+                        </button>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <div class="tab-sections">
+            <!-- Our Story -->
+            <div class="panel panel1 display" role="tabpanel" aria-labelledby="tab1"
+            tabindex="0" id="tabpanel1">
+                <div class="content">
+                    <header class="header flex-column-center">
+                        <h1 id="heading1" class="heading-1">Our Story</h1>
+                        <p class="desc">Alice and Ruben Guijarro</p>
+                    </header>
+                    <div class="text flex-column-center">
+                        <p class="text1">
+                            Alice and Ruben's love story began unexpectedly at a quaint café nestled in the heart of the Culver City. Alice, an
+                            aspiring artist, was sketching the bustling streets outside when Ruben, a charming writer, stumbled upon her work.
+                            Intrigued by her talent, he struck up a conversation, and their connection was instant. Over cups of steaming
+                            coffee, they shared stories, dreams, and laughter, discovering a deep bond that would shape their future.
+                        
+                        </p>
+                        <p>
+                            Their relationship blossomed with each passing day, marked by countless adventures, and shared passions. From hiking
+                            through southern California’s highest mountains to stargazing on secluded beaches, Alice and Ruben found joy in
+                            exploring the world together. Through ups and downs, they remained steadfast companions, their love growing stronger
+                            with each passing moment. As they navigated life's challenges hand in hand, they knew they were meant to spend
+                            eternity together.
+                        
+                        </p>
+                        <p>
+                            With hearts full of love and excitement, Alice and Ruben now embark on the journey towards their wedding day. Amidst
+                            the whirlwind of planning, they moment is cherish as they savor the anticipation of exchanging vows and beginning
+                            their next chapter as husband and wife. We hope you join us amidst family and friends on this upcoming day of a
+                            lifetime, as we promise to love and support each other for all eternity.
+                        
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Wedding Party -->
+            <div class="panel panel2 flex-column-center" role="tabpanel" aria-labelledby="tab2" tabindex="0" id="tabpanel2">
+                <header class="header flex-column-center">
+                    <h1 id="heading2" class="heading-1">Wedding Party</h1>
+                    <p class="desc">Alice and Ruben Guijarro</p>
+                    <div class="img-wrapper flex-column-center">
+                        <img class="img img1" src="/docs/assets/images/banner3.png" alt="Alice and Ruben holding hands at the beach">
+                        <img class="img img2" src="/docs/assets/images/portrait1.png" alt="">
+                    </div>
+                </header>
+                <ul class="container-cards flex-column-center" aria-labelledby="heading2">
+                    <!-- Parents of the Bride and Groom -->
+                    <div class="row row1 flex-row">
+                        <div class="heading-wrapper flex-center">
+                            <h2 class="heading-2">Parents of the Bride and Groom</h2>
+                        </div>
+                        <li class="card">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/wedding-party/parents1.jpg" alt="Parents of the Groom.">
+                            </div>
+                            <p class="title">Parents of the Groom</p>
+                            <p class="name">Harper and Joseph  Guijarro</p>
+                            <p class="desc"></p>
+                        </li>
+                        <li class="card">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/wedding-party/parents2.jpg" alt="Parents of the bride.">
+                            </div>
+                            <p class="title">Parents of the Bride</p>
+                            <p class="name">Grace and Ryan Edwards</p>
+                            <p class="desc"></p>
+                        </li>
+                    </div>
+                    <!-- Brides maids -->
+                    <div class="row flex-row">
+                        <div class="heading-wrapper flex-center">
+                            <h2 class="heading-2">Bridesmaids</h2>
+                        </div>
+                        <li class="card">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/wedding-party/sophia-williams.jpg" alt="">
+                            </div>
+                            <p class="title">Maid of Honor</p>
+                            <p class="name">Sophia Williams</p>
+                            <p class="desc">Friend of the bride for over 15 years. 
+                                Sophia and Alice have been through thick and thin together
+                            </p>
+                        </li>
+                        <li class="card">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/wedding-party/ava-brown.jpg" alt="">
+                            </div>
+                            <p class="title">Bridesmaid</p>
+                            <p class="name">Ava Brown</p>
+                            <p class="desc">Alice and Ava knew each other from college, 
+                                having met in a literature class where they bonded over 
+                                a shared love for Shakespearean tragedies</p>
+                        </li>
+                        <li class="card">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/wedding-party/mia-davis.jpg" alt="">
+                            </div>
+                            <p class="title">Bridesmaid</p>
+                            <p class="name">Mia Davis</p>
+                            <p class="desc">Mia and Alice know each other's families 
+                                well, having grown up as next-door neighbors and 
+                                spending countless holidays together.</p>
+                        </li>
+                        <li class="card">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/wedding-party/isabella-martinez.jpg" alt="">
+                            </div>
+                            <p class="title">Bridesmaid</p>
+                            <p class="name">Isabella Martinez</p>
+                            <p class="desc">Isabella and Alice lived as roommates for 
+                                years, supporting one another through post college life And
+                                life changing years.</p>
+                        </li>
+                        <li class="card">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/wedding-party/emily-johnson.jpg" alt="">
+                            </div>
+                            <p class="title">Bridesmaid</p>
+                            <p class="name">Emily Johnson</p>
+                            <p class="desc">Having met in high school, Alice and Emily 
+                                both shared a love for literature. From book writing and
+                                 book reading clubs, to late night conversations and 
+                                 bonfires, Emily and Alice are two peas in a pod.</p>
+                        </li>
+                    </div>
+                    <!-- Grooms men -->
+                    <div class="row flex-row">
+                        <div class="heading-wrapper flex-center">
+                            <h2 class="heading-2">Groomsmen</h2>
+                        </div>
+                        <li class="card">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/wedding-party/joseph-frasquillo.jpg" alt="">
+                            </div>
+                            <p class="title">Best Man</p>
+                            <p class="name">Joseph Frasquillo</p>
+                            <p class="desc">Ruben and Joseph have been friends 
+                                since childhood, having been teammates on the 
+                                soccer team since middle school and celebrated 
+                                victories both on and off the field.</p>
+                        </li>
+                        <li class="card">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/wedding-party/joshua-ortiz.jpg" alt="">
+                            </div>
+                            <p class="title">Groomsman</p>
+                            <p class="name">Joshua Ortiz</p>
+                            <p class="desc">Josh and Ruben are the textbook definition
+                                 of loyalty, with their friendship that has solidified 
+                                 through years of being there for each other 
+                                 through personal challenges and life milestones.</p>
+                        </li>
+                        <li class="card">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/wedding-party/chris-white.jpg" alt="">
+                            </div>
+                            <p class="title">Groomsman</p>
+                            <p class="name">Chris White</p>
+                            <p class="desc">Everybody needs a good duo. However, Chris 
+                                and Ruben are better described as the perfect duo. 
+                                Forming an unstoppable team in online games such as 
+                                Apex and Hell Divers 2, they have never ended on a loss.</p>
+                        </li>
+                        <li class="card">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/wedding-party/benjamin-smith.jpg" alt="">
+                            </div>
+                            <p class="title">Groomsman</p>
+                            <p class="name">Benjamin Smith</p>
+                            <p class="desc">Ruben and Ben (left) both shared a passion 
+                                for fitness, motivating each other to hit the gym
+                                 and set new fitness goals together. A gym bro should be
+                                there for both the work out and wedding.</p>
+                        </li>
+                        <li class="card">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/wedding-party/lucas-thompson.jpg" alt="">
+                            </div>
+                            <p class="title">Groomsman</p>
+                            <p class="name">Lucas Thompson</p>
+                            <p class="desc">Ruben and Lucas (right) have dedicated hours together 
+                                to community service, volunteering at local charities 
+                                and making a positive impact in their neighborhood.</p>
+                        </li>
+                    </div>
+                    <!-- Flower Boy | Dog -->
+                    <div class="heading-wrapper flex-center">
+                        <h2 class="heading-2">Flower Boy</h2>
+                    </div>
+                    <div class="row flex-row">
+                        <li class="card">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/wedding-party/t-rex.jpg" alt="">
+                            </div>
+                            <p class="title">Bestest Flower Boy</p>
+                            <p class="name">T-Rex</p>
+                            <p class="desc">T-Rex has been the most influential in 
+                                putting the wedding together. From licks of 
+                                encouragement to unparralled joy, T-Rex has done it all.</p>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <!-- Wedding Information -->
+            <div class="panel panel3" role="tabpanel" aria-labelledby="tab4" tabindex="0" id="tabpanel4">
+                <header class="header flex-column-center">
+                    <h1 id="heading3" class="heading-1">The Wedding</h1>
+                    <p class="desc">March 5th, 2023</p>
+                    <div class="img-wrapper flex-column-center">
+                        <img class="img" src="/docs/assets/images/wedding-site.jpg" alt="Alice and Ruben holding hands at the beach">
+                    </div>
+                </header>
+                <div class="content flex-center">
+                    <svg class="svg" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M16 144a144 144 0 1 1 288 0A144 144 0 1 1 16 144zM160 80c8.8 0 16-7.2 16-16s-7.2-16-16-16c-53 0-96 43-96 96c0 8.8 7.2 16 16 16s16-7.2 16-16c0-35.3 28.7-64 64-64zM128 480V317.1c10.4 1.9 21.1 2.9 32 2.9s21.6-1 32-2.9V480c0 17.7-14.3 32-32 32s-32-14.3-32-32z" />
+                    </svg>
+                    <p>123 East Rd Culver City, California | The Dennehof Garden Section</p>
+                </div>
+            </div>
+            <!-- Things To Do Panel -->
+            <div class="panel panel4" role="tabpanel" aria-labelledby="tab3"
+            tabindex="0" id="tabpanel3">
+                <header class="header flex-column-center">
+                    <h1 id="heading4" class="heading-1">Things to Do</h1>
+                    <p class="desc">In Culver City</p>
+                </header>
+                <ul class="container-cards flex-center" aria-labelledby="heading3">
+                    <div class="row row1 flex-row">
+                        <li class="card">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/horseback-riding.jpg" alt="">
+                                <p class="title">Horseback Riding</p>
+                                <div class="link-wrapper">
+                                    <a class="link"  href="https://maliburiders.com/" aria-label="Horseback Riding Details" target="_blank" rel="noopener">More Details</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/hiking.jpg" alt="">
+                                <p class="title">Culver City Hiking</p>
+                                <div class="link-wrapper">
+                                    <a class="link"  href="https://www.parks.ca.gov/?page_id=22790" aria-label="Culver City Hiking Details" target="_blank" rel="noopener">More Details</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/santa-monica-pier.jpg" alt="">
+                                <p class="title">Santa Monica Pier</p>
+                                <div class="link-wrapper">
+                                    <a class="link"  href="https://www.santamonicapier.org/" aria-label="Santa Monica Pier Details" target="_blank" rel="noopener">More Details</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/wende-museum.png" alt="">
+                                <p class="title">Wende Museum</p>
+                                <div class="link-wrapper">
+                                    <a class="link"  href="https://wendemuseum.org/"
+                                 aria-label="Wende Museum Details" target="_blank" rel="noopener">More Details</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/sony-pictures-studio.jpg" alt="">
+                                <p class="title">Sony Pictures Studio Tour</p>
+                                <div class="link-wrapper">
+                                    <a class="link"  href="https://www.sonypicturesstudiostours.com/" aria-label="Horseback Riding Details" target="_blank" rel="noopener">More Details</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/crypto-arena.jpg" alt="">
+                                <p class="title">Crypto Arena</p>
+                                <div class="link-wrapper">
+                                    <a class="link" href="https://www.cryptoarena.com/" aria-label="Horseback Riding Details" target="_blank" rel="noopener">More Details</a>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <!-- Itinerary -->
+            <div class="panel panel5" role="tabpanel" aria-labelledby="tab5"
+            tabindex="0" id="tabpanel5">
+                <header class="header flex-column-center">
+                    <h1 id="heading5" class="heading-1">Itinerary</h1>
+                    <p id="desc5" class="desc">Wedding Timeline and Expectations</p>
+                </header>
+                <div class="content flex-column-center">
+                    <!-- Afternoon: Ceremony -->
+                    <table class="table flex-column-center" role="table">
+                        <caption>
+                            Afternoon: Ceremony
+                        </caption>
+                        <div class="rgroup" role="rowgroup">
+                            <tr class="tr">
+                                <th scope="row">12:00 PM</th>
+                                <td>Guests start arriving at the ceremony venue</td>
+                            </tr>
+                            <tr class="tr">
+                                <th scope="row">12:30 PM</th>
+                                <td>Ceremony begins (exchange vows, rings, etc.)</td>
+                            </tr>
+                            <tr class="tr">
+                                <th scope="row">1:00 PM</th>
+                                <td>Ceremony ends, guests proceed to cocktail hour</td>
+                            </tr>
+                        </div>
+                    </table>
+                    <!-- Afternoon: Cocktail Hour -->
+                    <table class="table flex-column-center" role="table">
+                        <caption>
+                            Afternoon: Cocktail Hour
+                        </caption>
+                        <div class="rgroup" role="rowgroup">
+                            <tr class="tr">
+                                <th scope="row">1:15 PM</th>
+                                <td>Newlyweds take photos with family and bridal party</td>
+                            </tr>
+                            <tr class="tr">
+                                <th scope="row">2:00 PM</th>
+                                <td>Guests enjoy drinks and appetizers at cocktail hour</td>
+                            </tr>
+                            <tr class="tr">
+                                <th scope="row">2:30 PM</th>
+                                <td>Bride and groom join cocktail hour, mingle with guests</td>
+                            </tr>
+                        </div>
+                    </table>
+                    <!-- Evening: Reception -->
+                    <table class="table flex-column-center" role="table">
+                        <caption>
+                            Evening: Reception
+                        </caption>
+                        <div class="rgroup" role="rowgroup">
+                            <tr class="tr">
+                                <th scope="row">3:00 PM</th>
+                                <td>Guests enter reception area, find their seats</td>
+                            </tr>
+                            <tr class="tr">
+                                <th scope="row">3:30 PM</th>
+                                <td>Newlyweds make grand entrance, first dance</td>
+                            </tr>
+                            <tr class="tr">
+                                <th scope="row">4:00 PM</th>
+                                <td>Dinner is served (toasts, speeches during dinner)</td>
+                            </tr>
+                            <tr class="tr">
+                                <th scope="row">5:30 PM</th>
+                                <td>Cake cutting ceremony, dessert served</td>
+                            </tr>
+                            <tr class="tr">
+                                <th scope="row">6:00 PM</th>
+                                <td>Open dance floor, music and celebration</td>
+                            </tr>
+                            <tr class="tr">
+                                <th scope="row">8:00 PM</th>
+                                <td>Bouquet toss and garter toss</td>
+                            </tr>
+                            <tr class="tr">
+                                <th scope="row">8:30 PM</th>
+                                <td>Final dance, farewell to guests</td>
+                            </tr>
+                            <tr class="tr">
+                                <th scope="row">9:00 PM</th>
+                                <td>Newlyweds depart for honeymoon suite</td>
+                            </tr>
+                        </div>
+                    </table>
+                </div>
+            </div>
+            <!-- RSVP -->
+            <div class="panel panel6" role="tabpanel" aria-labelledby="tab6"
+            tabindex="0" id="tabpanel6">
+                <header class="header flex-column-center">
+                    <h1 id="heading6" class="heading-1">RSVP</h1>
+                    <p class="desc">Come Join Us</p>
+                </header>
+                <form class="form flex-column-center" action="" id="rsvp">
+                    <div class="field flex-row-center">
+                        <label class="lbl" for="fname">First Name</label>
+                        <input id="fname" class="input" type="text">
+                    </div>
+                    <div class="field flex-row-center">
+                        <label class="lbl" for="lanme">Last Name</label>
+                        <input id="lname" class="input" type="text">
+                    </div>
+                    <div class="field flex-row-center">
+                        <label class="lbl" for="email">Email</label>
+                        <input id="email" class="input" type="email">
+                    </div>
+                    <div class="field flex-row-center">
+                        <label class="lbl" for="guests">Anybody Else?</label>
+                        <input id="guests" class="input input4" type="number" placeholder="0">
+                    </div>
+                    <div class="field flex-row-center">
+                        <input class="submit" type="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
