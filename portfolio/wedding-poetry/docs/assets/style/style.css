@@ -1,9 +1,4 @@
 /* Set Standards and Defaults */
-@font-face {
-    font-family: "Miama";
-    src: url("/docs/assets/fonts/Miama.ttf");
-}
-
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Laila', serif;
     color:#38282C;
@@ -741,6 +736,44 @@ a {
     }
 }
 
+.poems-container .link-wrapper {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.poems-container .link-wrapper p {
+    font-size: 1.1rem;
+    max-width: 100%;
+    width: 50ch;
+    margin-bottom: 2rem;
+    text-align: center;
+    line-height: 220%;
+    letter-spacing: 1px;
+}
+@media screen and (orientation: portrait) {
+    .poems-container .link-wrapper p {
+        margin-top: 30vh;
+    }
+}
+
+.poems-container .link-wrapper a {
+    color: white;
+    background-color: #38282C;
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    display: block;
+    width: max-content;
+    cursor: pointer;
+    letter-spacing: 1px;
+    margin-bottom: 10vh;
+}
+
 .poem-container.poem2 .stanza {
     margin-left: 35%;
 }
@@ -1076,8 +1109,10 @@ a {
 
 .tabs-main .panel .header .desc {
     margin: 1.5rem 0;
-    font-family: "Miama";
-    font-size: 2.5rem;
+    font-family: "Allura", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.2rem;
 }
 @media screen and (max-width: 768px) and (orientation: portrait) {
     .tabs-main .panel .header .desc {
@@ -1227,6 +1262,7 @@ a {
     background-color: #38282C;
     border-radius: 50px;
     font-size: 1.4rem;
+    white-space: nowrap;
 }
 
 /* Panel 5 | Itinerary */
