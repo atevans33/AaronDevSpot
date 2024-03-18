@@ -30,6 +30,7 @@ a {
 
 .nav {
     height: 100vh;
+    height: 100lvh;
     width: 20vw;
     box-sizing: border-box;
     position: fixed;
@@ -57,14 +58,14 @@ a {
 @media screen and (max-width: 700px) {
     .nav {
         width: 100vw;
-        height: 100vh;
+        height: 100lvh;
     }
     .nav.open::before {
         position: absolute;
         content: "";
         top: 0;
         left: 0;
-        height: 100vh;
+        height: 100lvh;
         width: 0vw;
         background-color: #38282C;
         animation: open-nav-background 500ms ease-in-out forwards;
