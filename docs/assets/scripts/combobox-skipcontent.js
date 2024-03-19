@@ -3,7 +3,10 @@
 Portfolio Index Page
 Author: Aaron Evans
 Referenced Source: https://www.w3.org/WAI/ARIA/apg/patterns/combobox/
-Last Update: 02/04/2024
+
+Description: Code for an accessible combobox element. 
+This is a non form version of combobox that is not meant for
+saving selection
 
 */
 "use strict";
@@ -15,7 +18,7 @@ Last Update: 02/04/2024
 
 //Save a list of actions for various UI elements
 //each HTML interactive element functions off of these user actions
-const SelectActions = {
+const SelectActions_Combo = {
     Close: 0,//escape
     CloseSelect: 1,
     First: 2,
@@ -44,15 +47,15 @@ function getActionFromKey(event, menuOpen) {
 
     //handle opening when closed
     if(openKeys.includes(key) && !menuOpen) {
-        return SelectActions.Open;
+        return SelectActions_Combo.Open;
     }
 
     //home and end move he selected option when open or closed
     if(key === "Home") {
-        return SelectActions.First;
+        return SelectActions_Combo.First;
     }
     if(key === "End") {
-        return SelectActions.Last;
+        return SelectActions_Combo.Last;
     }
 
     //handle typing characters when open or closed
@@ -61,25 +64,25 @@ function getActionFromKey(event, menuOpen) {
         key === 'Clear' ||
         (key.length === 1 && key != ' ' && !altKey && !ctrlKey && !metaKey)
     ) {
-        return SelectActions.Type;
+        return SelectActions_Combo.Type;
     }
 
     //handle keys when open
     if(menuOpen) {
         if(key === 'ArrowUp' && altKey) {
-            return SelectActions.CloseSelect;
+            return SelectActions_Combo.CloseSelect;
         } else if (key === 'ArrowDown' && !altKey) {
-            return SelectActions.Next;
+            return SelectActions_Combo.Next;
         } else if (key === 'ArrowUp') {
-            return SelectActions.Previous;
+            return SelectActions_Combo.Previous;
         } else if (key === 'PageUp') {
-            return SelectActions.PageUp;
+            return SelectActions_Combo.PageUp;
         }else if (key === 'PageDown') {
-            return SelectActions.PageDown;
+            return SelectActions_Combo.PageDown;
         }else if (key === 'Escape') {
-            return SelectActions.Close;
+            return SelectActions_Combo.Close;
         }else if (key === 'Enter' || key === ' ') {
-            return SelectActions.Select;
+            return SelectActions_Combo.Select;
         }
     }
 };
@@ -121,17 +124,17 @@ function getUpdatedIndex(currentIndex, maxIndex, action) {
     const pageSize = 4; //used for pageup/pagedown
 
     switch(action) {
-        case SelectActions.First:
+        case SelectActions_Combo.First:
             return 0;
-        case SelectActions.Last:
+        case SelectActions_Combo.Last:
             return maxIndex
-        case SelectActions.Previous:
+        case SelectActions_Combo.Previous:
             return Math.max(0, currentIndex - 1);
-        case SelectActions.Next:
+        case SelectActions_Combo.Next:
             return Math.min(maxIndex, currentIndex + 1);
-        case SelectActions.PageUp:
+        case SelectActions_Combo.PageUp:
             return Math.max(0, currentIndex - pageSize);
-        case SelectActions.PageDown:
+        case SelectActions_Combo.PageDown:
             return Math.min(maxIndex, currentIndex + pageSize);
         default:
             return currentIndex;
@@ -211,14 +214,13 @@ function Select (el) {//define as class
 };
 
 Select.prototype.init = function() {
-    //select first option by default
-    this.comboEl.innerHTML = this.options[3].innerHTML;
-
     //add event listeners
     this.comboEl.addEventListener('blur', this.onComboBlur.bind(this));
     this.listboxEl.addEventListener('focusout', this.onComboBlur.bind(this));
     this.comboEl.addEventListener('click', this.onComboClick.bind(this));
     this.comboEl.addEventListener('keydown', this.onComboKeyDown.bind(this))
+    this.el.querySelector('.combo-input').addEventListener('focusin', this.onSelectFocus.bind(this));
+    this.el.querySelector('.combo-input').addEventListener('focusout', this.onSelectNoFocus.bind(this));
 
     //setup options
     this.options.forEach((el) => {
@@ -231,9 +233,13 @@ Select.prototype.setupOption = function (option) {
     let index = indexOf(this.options, option);
 
     option.addEventListener('click', (event) => {
-        event.stopPropagation();
         this.onOptionClick(index);
     });
+
+    option.addEventListener('mouseenter', () => {
+        this.onOptionHover(index);
+    });
+
     option.addEventListener('mousedown', this.onOptionMouseDown.bind(this));
 
     return option;
@@ -263,7 +269,6 @@ Select.prototype.onComboBlur = function (event) {
 
     //select current option and close
     if (this.open) {
-        this.selectOption(this.activeIndex);
         this.updateMenuState(false, false);
     }
 };
@@ -279,32 +284,32 @@ Select.prototype.onComboKeyDown = function (event) {
     const action = getActionFromKey(event, this.open);
 
     switch(action) {
-        case SelectActions.Last:
-        case SelectActions.First:
+        case SelectActions_Combo.Last:
+        case SelectActions_Combo.First:
             this.updateMenuState(true);
         //intentional fallthrough
-        case SelectActions.Next:
-        case SelectActions.Previous:
-        case SelectActions.PageUp:
-        case SelectActions.PageDown:
+        case SelectActions_Combo.Next:
+        case SelectActions_Combo.Previous:
+        case SelectActions_Combo.PageUp:
+        case SelectActions_Combo.PageDown:
             event.preventDefault();
             return this.onOptionChange(
                 getUpdatedIndex(this.activeIndex, max, action)
             );
-        case SelectActions.CloseSelect:
+        case SelectActions_Combo.CloseSelect:
             event.preventDefault();
             this.selectOption(this.activeIndex);
         //intential fallthrough
-        case SelectActions.Close:
+        case SelectActions_Combo.Close:
             event.preventDefault();
             return this.updateMenuState(false);
-        case SelectActions.Type:
+        case SelectActions_Combo.Type:
             return this.onComboKeyDown(key);
-        case SelectActions.Open:
+        case SelectActions_Combo.Open:
             event.preventDefault();
             return this.updateMenuState(true);
-        case SelectActions.Select:
-            this.selectOption(this.activeIndex);
+        case SelectActions_Combo.Select:
+            return this.onOptionSelect(this.activeIndex);
     }
 };
 
@@ -339,27 +344,39 @@ Select.prototype.onOptionChange = function (index) {
     this.comboEl.setAttribute('aria-activedescendent', `${this.idBase}-${index}`);
 
     //update active option styles
-    const options = this.el.querySelectorAll('[role=option]');
-    [...options].forEach((optionEl) => {//this method works for option lists with < 50 options
+    [...this.options].forEach((optionEl) => {//this method works for option lists with < 50 options
         optionEl.classList.remove('option-current');
     });
-    options[index].classList.add('option-current');
+    this.options[index].classList.add('option-current');
 
     //ensure the new option is in view
     if(isScrollable(this.listboxEl)) {
-        maintainScrollVisibility(options[index], this.listboxEl);
+        maintainScrollVisibility(this.options[index], this.listboxEl);
     }
 
     //ensure the new options is visible on screen
     //ensure the new option is in view
-    if(!isElementInView(options[index])) {
-        options[index].scrollIntoView({behavior: 'smooth', block: 'nearest'});
+    if(!isElementInView(this.options[index])) {
+        this.options[index].scrollIntoView({behavior: 'smooth', block: 'nearest'});
     }
 };
 
 Select.prototype.onOptionClick = function (index) {
     this.onOptionChange(index);
     this.selectOption(index);
+    this.updateMenuState(false);
+}
+
+Select.prototype.onOptionHover = function (index) {
+    this.onOptionChange(index);
+    this.selectOption(index);
+}
+
+Select.prototype.onSelectFocus = function () {
+    this.updateMenuState(true);
+}
+
+Select.prototype.onSelectNoFocus = function () {
     this.updateMenuState(false);
 }
 
@@ -373,19 +390,17 @@ Select.prototype.selectOption = function (index) {
     //update state
     this.activeIndex = index;
 
-    //update displayed value
-    const selected = this.options[index];
-    this.comboEl.innerHTML = selected.innerHTML;
-
-    //update aria-selected
-    const options = this.el.querySelectorAll('[role=option]');
-    [...options].forEach((optionEl) => {
-        optionEl.setAttribute('aria-selected', 'false');
-    });
-    options[index].setAttribute('aria-selected', 'true');
+    //focus element
+    this.options[index].focus();
 };
 
+Select.prototype.onOptionSelect = function (index) {
+    //focus element
+    this.options[index].click();
+}
+
 Select.prototype.updateMenuState = function (open, callFocus = true) {
+    //if the state we want it to be in is already it's current state, ignore
     if (this.open === open) {
         return;
     }
@@ -395,7 +410,14 @@ Select.prototype.updateMenuState = function (open, callFocus = true) {
 
     //update aria-expanded and styles
     this.comboEl.setAttribute('ariaexpanded', `${open}`);
-    open ? this.el.classList.add('open') : this.el.classList.remove('open');
+    if(open) {
+        this.el.classList.remove('hide-visually');
+        this.el.classList.add('open');
+    }
+    else { 
+        this.el.classList.add('hide-visually');
+        this.el.classList.remove('open');
+    }
 
     //update activedescendent
     const activeID = open ? `${this.idBase}-${this.activeIndex}` : '';
@@ -411,7 +433,7 @@ Select.prototype.updateMenuState = function (open, callFocus = true) {
 
 //init select
 window.addEventListener('load', function () {
-    const comboEls = document.querySelectorAll('.combo-standard');
+    const comboEls = document.querySelectorAll('.skip-combo');
 
     comboEls.forEach((el) => {
         new Select(el);
