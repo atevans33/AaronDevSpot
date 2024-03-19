@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Services | Aaron's Web Services</title>
+    <!-- Styleshet -->
+    <link rel="stylesheet" href="/docs/assets/style/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Romanesco&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="docs/assets/images/logo.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJNZHSJ17G"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SJNZHSJ17G');
+    </script>
+    <!-- Javascript Scripts -->
+    <script defer src="/docs/assets/scripts/accessibility-services.js"></script>
+    <script defer src="/docs/assets/scripts/tabs-access.js"></script>
+    <script defer src="/docs/assets/scripts/combobox-skipcontent.js"></script>
+    <script defer src="/docs/assets/scripts/nav.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/docs/assets/images/logo.png">
+</head>
+<body>
+    <!-- Skip to main content -->
+    <div class="combo skip-combo view-width-constrain hide-visually">
+        <div class="container">
+            <div class="combo-input" id="combo1" role="combobox" 
+            tabindex="0" aria-haspopup="listbox" aria-controls="listbox1">Skip To Main Content (Alt + 0)</div>
+            <!-- Combo Menu | List of Options -->
+            <div class="combo-menu" role="listbox" id="listbox1" 
+            aria-labelledby="combo1" tabindex="-1">
+                <div class="regions-list">
+                    <p id="listbox1-lbl1" class="list-lbl">Regions</p>
+                    <hr>
+                    <ol aria-labelledby="listbox1-lbl1" class="regions-list">
+                        <li id="listbox1-region1" >
+                            <a role="option" class="combo-option" href="#navlink1">Navigation</a></li>
+                        <li  id="listbox1-region2" >
+                            <a role="option" class="combo-option" href="#toc">Table of Contents</a></li>
+                        <li  id="listbox1-region3" >
+                            <a role="option" class="combo-option" href="#remediation-heading">Main Content</a></li>
+                        <li  id="listbox1-region4" >
+                            <a role="option" class="combo-option" href="#connect-region">Footer</a></li>
+                    </ol>
+                </div>
+                <div class="headings-list">
+                    <p id="listbox1-lbl2" class="list-lbl">Headings</p>
+                    <hr>
+                    <ol aria-labelledby="listbox1-lbl2" class="heading-list">
+                        <li id="listbox1-heading1" aria-selected="false">
+                            <a role="option" class="combo-option" href="#heading1">Digital Accessibility</a>
+                        </li>
+                        <ol class="sub-menu">
+                            <li id="listbox1-region1" >
+                                <a role="option" class="combo-option sub-option"  href="#remediation-heading">What Does it Look Like?</a></li>
+                            <li id="listbox1-region1" >
+                                <a role="option" class="combo-option sub-option" href="#3-4-heading">What do we look for?</a></li>
+                            <li id="listbox1-region1" >
+                                <a role="option" class="combo-option sub-option" href="#heading2-3">You can trust us</a></li>
+                            <li id="listbox1-region1" >
+                                <a role="option" class="combo-option sub-option" href="#heading2-4">Accessibility Services</a></li>
+                        </ol>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navigation Region -->
+    <nav class="nav nav-contact view-width-constrain" role="navigation">
+        <div class="nav-wrapper">
+            <div class="author">
+                <img class="img" src="/docs/assets/images/aaron-pfp.jpg" alt="">
+                <p class="text">Aaron Evans</p>
+            </div>
+            <div class="nav-content">
+                <button class="hamburger-1 hamburger-index" aria-expanded="false" role="menu" id="menu"
+                    aria-label="Menu">
+                    <!--background for open nav on tablet/mobile-->
+                    <div class="circle-background"></div>
+                    <svg class="svg" viewbox="0 0 100 100">
+                        <line class="line top" x1="90" x2="10" y1="25" y2="25" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
+                        <line class="line mid" x1="10" x2="90" y1="50" y2="50" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
+                        <line class="line bot" x1="10" x2="90" y1="75" y2="75" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0">
+                        </line>
+                    </svg>
+                    <span id="menu-lbl" class="hide-visually">Menu</span>
+                </button>
+                <ul id="menu-list" class="menu" aria-labelledby="menu-lbl">
+                    <li><a id="navlink1" class="link link1" href="/#bio-region">About Me</a>
+                    </li>
+                    <li><a id="navlink2" class="link link2" href="/#portf-region">Portfolio</a>
+                    </li>
+                    <li><a id="navlink3" class="btn link3" href="/contact/" aria-current="true">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main role="main">
+        <header class="main-header-2">
+            <div class="intro-top flex-row center view-width-constrain">
+                <div class="left">
+                    <div class="content">
+                        <h1 id="heading1" class="heading-1">Digital Accessibility</h1>
+                        <p class="desc1">
+                            Have you ever wondered how someone with no vision uses the web? Well that’s my job!
+                        </p>
+                        <p class="desc2">
+                            Up to 1 in 4 US adults having some sort of disability, it's important to ensure your website can be used by
+                            everyone.
+                        </p>
+                        <div class="desc3">
+                            <div class="arrow">
+                                <svg viewBox="0 0 43 43" fill="none">
+                                    <circle cx="21.5" cy="21.5" r="20.5" stroke="white" stroke-width="2"/>
+                                    <path d="M21.2929 32.7071C21.6834 33.0976 22.3166 33.0976 22.7071 32.7071L29.0711 26.3431C29.4616 25.9526 29.4616 25.3195 29.0711 24.9289C28.6805 24.5384 28.0474 24.5384 27.6569 24.9289L22 30.5858L16.3431 24.9289C15.9526 24.5384 15.3195 24.5384 14.9289 24.9289C14.5384 25.3195 14.5384 25.9526 14.9289 26.3431L21.2929 32.7071ZM21 11L21 32L23 32L23 11L21 11Z" fill="white"/>
+                                    </svg>
+                            </div>
+                            <p>Scroll down to learn more</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right flex-column">
+                    <img class="img" src="/docs/assets/images/ada-graphics.png" alt="">
+                </div>
+            </div>
+            <div class="heading-wrapper view-width-constrain">
+                <h2 class="heading-2" id="toc">Table of Contents</h2>
+            </div>
+            <div class="skip-bottom view-width-constrain">
+                <ul class="skip-list">
+                    <li role="none">
+                        <span aria-hidden="true">- </span>
+                        <a role="listitem" href="#remediation-heading">How it looks</a>
+                    </li>
+                    <li role="none">
+                        <span aria-hidden="true">- </span>
+                        <a role="listitem" href="#services-heading">What we look for</a>
+                    </li>
+                    <li role="none">
+                        <span aria-hidden="true">- </span>
+                        <a role="listitem" href="#services-heading">You can trust us</a>
+                    </li>
+                    <li role="none">
+                        <span aria-hidden="true">- </span>
+                        <a role="listitem" href="#services-heading">Web Accessibility Services</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- Accessisibility Section -->
+        <div class="sec-access sec flex-row view-width-constrain">
+            <div class="wrapper">
+                <div class="left-panel flex-center">
+                    <div class="content">
+                        <div class="heading-wrapper">
+                            <h2 id="remediation-heading" class="heading-2">What Does it look like?</h2>
+                        </div>
+                        <div class="desc-wrapper">
+                            <p class="desc">Select the steps below to see what<br> ADA website remediation looks like</p>
+                        </div>
+                        <div class="tablist" role="tablist" aria-label="Remediation Steps">
+                            <ol class="steps-container flex-row">
+                                <li><button role="tab" id="tab1" type="button" aria-selected="true" tabindex="0"
+                                    aria-controls="tabpanel-1" class="btn flex-center"><span class="hide-visually">Step</span><span class="no no1">1</span></button>
+                                </li>
+                                <li><button role="tab" id="tab2" type="button" aria-selected="false" tabindex="-1"
+                                    aria-controls="tabpanel-2" class="btn flex-center"><span class="hide-visually">Step</span><span class="no">2</span></button>
+                                </li>
+                                <li><button role="tab" id="tab3" type="button" aria-selected="false" tabindex="-1"
+                                    aria-controls="tabpanel-3" class="btn flex-center"><span class="hide-visually">Step</span><span class="no">3</span></button>
+                                </li>
+                                <li><button role="tab" id="tab4" type="button" aria-selected="false" tabindex="-1"
+                                    aria-controls="tabpanel-4" class="btn flex-center"><span class="hide-visually">Step</span><span class="no">4</span></button>
+                                </li>
+                            </ol>
+                            <div class="step-desc-container" id="steps-container">
+                                <div role="tabpanel" tabindex="0" id="tabpanel-1"
+                                aria-labelledby="tab1" class="steps-desc display">
+                                    <p>
+                                        A website may look fine, but there could be a lot of accessibility problems underneath the hood.
+                                    </p>
+                                </div>
+                                <div role="tabpanel" tabindex="0" id="tabpanel-2"
+                                aria-labelledby="tab2" class="steps-desc">
+                                    <p>
+                                        So, after glancing over the top of a site, I check under the hood for less obvious issues.
+                                    </p>
+                                </div>
+                                <div role="tabpanel" tabindex="0" id="tabpanel-3"
+                                aria-labelledby="tab3" class="steps-desc">
+                                    <p>
+                                        After reviewing everything, I share my findings and suggestions with you.
+                                    </p>
+                                </div>
+                                <div role="tabpanel" tabindex="0" id="tabpanel-4"
+                                aria-labelledby="tab4" class="steps-desc">
+                                    <p>
+                                        After your approval, I correct all the accessibility errors present, making it accessible. Simple, right?
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-panel flex-center">
+                    <div id="access-panel" class="panel-content">
+                        <!-- f for fake -->
+                        <div class="fnav" aria-label="fake website template to show ada accessibility process">
+                            <div class="logo-wrapper">
+                                <div class="logo">Logo
+                                    <div class="error error1 nocheck" tabindex="0">
+                                        <div role="tooltip" class="tooltip" aria-labelledby="e1-lbl">
+                                            <div class="circle">
+                                                <div class="symbol">
+                                                    <span class="exclamation">!</span>
+                                                    <span class="check">&#10004;</span> 
+                                                </div>
+                                            </div>
+                                            <div class="message before">
+                                                <p id="e1-lbl" class="lbl">No Alt Text:</p>
+                                                <p class="desc">Image has no hidden alternate text for those with vision problems.
+                                                </p>
+                                            </div>
+                                            <div class="message after">
+                                                <p id="e1-lbl" class="lbl">No Alt Text:</p>
+                                                <p class="desc">The photo was given alt text to describe what it is for screen readers.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="links-wrapper">
+                                <div class="link1"></div>
+                                <div class="link2"></div>
+                                <div class="link3"></div>
+                                <div class="link4"></div>
+                            </div>
+                        </div>
+                        <div class="fmain" aria-hidden="true">
+                            <div class="img-wrapper">
+                                <div class="img">
+                                </div>
+                                <div class="error error2 nocheck" tabindex="0">
+                                    <div role="tooltip" class="tooltip" aria-labelledby="e1-lbl">
+                                        <div class="circle">
+                                            <div class="symbol">
+                                               <span class="exclamation">!</span>
+                                                <span class="check">&#10004;</span> 
+                                            </div>
+                                        </div>
+                                        <div class="message before">
+                                            <p id="e1-lbl" class="lbl">No Alt Text:</p>
+                                            <p class="desc">Image has no hidden alternate text for those with vision problems.</p>
+                                        </div>
+                                        <div class="message after">
+                                            <p id="e1-lbl" class="lbl">No Alt Text:</p>
+                                            <p class="desc">Alt text was added to describe the image to screen readers</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-content">
+                                <div class="fheading"></div>
+                                <div class="list">
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="button-wrapper">
+                                    <div class="fbtn">
+                                        <div class="error error3 nocheck" tabindex="0">
+                                            <div role="tooltip" class="tooltip" aria-labelledby="e1-lbl">
+                                                <div class="circle">
+                                                    <div class="symbol">
+                                                        <span class="exclamation">!</span>
+                                                        <span class="check">&#10004;</span>
+                                                    </div>
+                                                </div>
+                                                <div class="message before">
+                                                    <p id="e1-lbl" class="lbl">Color Contrast:</p>
+                                                    <p class="desc">Color between the background and text needs to be easy to
+                                                        differ.</p>
+                                                </div>
+                                                <div class="message after">
+                                                    <p id="e1-lbl" class="lbl">Color Contrast:</p>
+                                                    <p class="desc">The button color was changed to make it easier to see for everyone.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ffooter" aria-hidden="true">
+                            <div class="left">
+                                <img class="img" src="/docs/assets/images/img-placeholder.png" alt="">
+                                <div class="name-wrapper">
+                                    <div class="name">Footer</div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="list">
+                                    <div class="li">
+                                        <div class="bullet"></div>
+                                        <div class="line"></div>
+                                    </div>
+                                    <div class="li">
+                                        <div class="bullet"></div>
+                                        <div class="line"></div>
+                                    </div>
+                                    <div class="error error4 nocheck" tabindex="0">
+                                        <div role="tooltip" class="tooltip" aria-labelledby="e1-lbl">
+                                            <div class="circle">
+                                                <div class="symbol">
+                                                    <span class="exclamation">!</span>
+                                                    <span class="check">&#10004;</span>
+                                                </div>
+                                            </div>
+                                            <div class="message before">
+                                                <p id="e1-lbl" class="lbl">Fake List:</p>
+                                                <p class="desc">A list needs to be easy to see visibly and programatically. Not one
+                                                    or the other.</p>
+                                            </div>
+                                            <div class="message after">
+                                                <p id="e1-lbl" class="lbl">Fake List:</p>
+                                                <p class="desc">Website HTML code now describes the visbile list as a programmed one too.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="non-visual-content" id="gold-ribbon">
+                            <div class="ribbon">
+                                <div class="outer-shell">
+                                    <div class="inner-circle">
+                                        <span aria-hidden="true" class="checkmark">&#10004;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-text">
+                        <p class="text" id="right-panel-comment">Hover or select errors for more details.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec-3-4-card sec">
+            <div class="sec-content view-width-constrain flex-center">
+                <div class="heading-wrapper">
+                    <h2 id="3-4-heading" class="heading-2">What do we look for?</h2>
+                </div>
+            <div class="card-wrapper">
+                <ol class="card-list grid">
+                    <li class="card">
+                        <div class="heading-wrapper" aria-hidden="true">
+                            <h3 class="heading-3">blank</h3>
+                        </div>
+                        <div class="content-1">
+                            <p class="text">We test every website for P.O.U.R</p>
+                            <ol class="list-pour">
+                                <li class="li">Percievable</li>
+                                <li class="li">Operable</li>
+                                <li class="li">Understandable</li>
+                                <li class="li">Robust</li>
+                            </ol>
+                            <p class="text">Tap the following cards for info</p>
+                        </div>
+                    </li>
+                    <li class="card" aria-labelledby="card-heading1">
+                        <div class="heading-wrapper">
+                            <h3 id="card-heading1" class="heading-3">Percievable</h3>
+                        </div>
+                        <div class="content">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/eye-crossed.svg" alt="">
+                            </div>
+                            <div class="desc" tabindex="0">
+                                <p>Everything must be ‘visible’. This includes proper video CC 
+                                    for a hard of hearing user, audio descriptions for a
+                                    user with a vision impairment, zoomable text for grandpa, 
+                                    and much more
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card" aria-labelledby="card-heading2">
+                        <div class="heading-wrapper">
+                            <h3 id="card-heading2" class="heading-3">Operable / Robust</h3>
+                        </div>
+                        <div class="content">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/wheelchair-icon.svg" alt="">
+                            </div>
+                            <div class="desc" tabindex="0">
+                                <p>
+                                    People use computers in very different ways. 
+                                    Some users have difficulties using a mouse, so they navigate everything
+                                    with only a keyboard. Your website must accommodate every user’s needs.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card" aria-labelledby="card-heading3">
+                        <div class="heading-wrapper">
+                            <h3 id="card-heading3" class="heading-3">Understandable</h3>
+                        </div>
+                        <div class="content">
+                            <div class="img-wrapper">
+                                <img class="img" src="/docs/assets/images/brain.svg" alt="">
+                            </div>
+                            <div class="desc" tabindex="0">
+                                <p>
+                                    Directions, abbreviations, and special terms must be 
+                                    clear and understandable to users. This is the most
+                                    underappreciated criteria, but makes all the difference 
+                                    in a user being able to use your website.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <div class="bottom-wrapper">
+                <p class="text">
+                    Want the full list? Visit the w3c website and check out the <a href="https://www.w3.org/WAI/videos/standards-and-benefits/" target="_blank" rel="noopener">web accessibility 
+                    content guidelines</a> that we follow to determine
+                    digital accessibility.
+                </p>
+            </div>
+            </div>
+        </div>
+        <div class="sec-certifications sec">
+            <div class="top view-width-constrain">
+                <div class="text-wrapper">
+                    <h2 id="heading2-3" class="heading-2">You can trust us</h2>
+                    <p class="desc1">We're certified!</p>
+                    <p class="desc2">
+                        We are certified professionals in
+                        digital accessibility. When we say you can trust us,
+                        it's beacuse we kno what to look for and how to fix it.
+                    </p>
+                </div>
+                <div class="cert-wrapper flex-row">
+                    <div class="cert">
+                        <div class="content flex-center">
+                            <h3 class="heading-3">Trusted Tester</h3>
+                            <p class="desc">Department of Homeland Security</p>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="badge">
+                        </div>
+                    </div>
+                    <div class="cert">
+                        <div class="content flex-center">
+                            <h3 class="heading-3">Digital<br>Accessibility</h3>
+                            <p class="desc">eDX</p>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="badge">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <img class="img img-parallax" src="/docs/assets/images/stamped-accessibility-certification.jpg" alt="">
+            </div>
+        </div>
+        <div class="sec-3-2 sec view-width-constrain ">
+            <div class="heading-wrapper">
+                <h2 id="heading2-4" class="heading-2">Web Accessibility Services</h2>
+            </div>
+            <div class="content flex-row">
+                <div class="long-card card1">
+                    <div class="text-wrapper">
+                        <h3 class="heading-3">Website Remediation Services</h3>
+                        <p class="desc">We'll get your website accessible and operable by everone.</p>
+                        <div class="link-wrapper">
+                            <a href="">Make my website accessible</a>
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img class="img" src="/docs/assets/images/laptop-website.jpg" alt="">
+                    </div>
+                </div>
+                <div class="long-card card2">
+                    <div class="text-wrapper">
+                        <h3 class="heading-3">Document Remediation Services</h3>
+                        <p class="desc">Whether its a PDF, Word, or video, we'll make your document accessible</p>
+                        <div class="link-wrapper">
+                            <a href="">Fix my document</a>
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img class="img" src="/docs/assets/images/documents.jpg" alt="">
+                    </div>
+                </div>
+                <div class="long-card card3">
+                    <div class="text-wrapper">
+                        <h3 class="heading-3">Accessibility Training Services</h3>
+                        <p class="desc">We offer training services for documents and websites.</p>
+                        <div class="link-wrapper">
+                            <a href="">ADA Training</a>
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img class="img" src="/docs/assets/images/accessibility-training.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="connect-region" class="connect-region" aria-labelledby="connect-lbl" role="contentinfo">
+        <h2 id="connect-lbl" class="connect-lbl">Let's Connect</h2>
+        <div class="content">
+            <div class="wrapper">
+                <div class="flex">
+                    <div class="link-wrapper">
+                        <p class="text">Want to find out more?<br>Let's talk!</p>
+                        <a href="https://aarondevspot.com/pages/contact.html" class="contact-footer">Contact Me</a>
+                    </div>
+                    <region role="region" class="socials-region region" aria-labelledby="contact1-lbl"
+                        aria-describedby="contact1-desc">
+                        <div class="region-content">
+                            <div class="text">
+                                <h2 class="heading" id="contact1-lbl">Find me elsewhere</h2>
+                                <p id="contact1-desc" class="desc">Let's make a web for eveeryone, together.</p>
+                            </div>
+                            <ul class="list flex-list-contact">
+                                <li class="li">
+                                    <a href="https://www.linkedin.com/in/aaron-evans-795a98190/" target="_blank"
+                                        rel="noopener">
+                                        <img src="/docs/assets/images/linkedin-logo.png" alt="">
+                                        <p class="hide-visually">View LinkedIn Profile.</p>
+                                    </a>
+                                </li>
+                                <li class="li">
+                                    <a href="https://www.upwork.com/freelancers/~01740a6b8654c1b6b8?viewMode=1&s=1044578476142100494"
+                                        target="_blank" rel="noopener">
+                                        <img src="/docs/assets/images/upwork-logo.png" alt="">
+                                        <p class="hide-visually">View Upwork Profile.</p>
+                                    </a>
+                                </li>
+                                <li class="li">
+                                    <a href="https://github.com/atevans33/AaronDevSpot" target="_blank" rel="noopener">
+                                        <img src="/docs/assets/images/github-logo.png" alt="">
+                                        <p class="hide-visually">View Github for this website.</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </region>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
