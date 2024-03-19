@@ -8,6 +8,8 @@
     <meta name="ahrefs-site-verification" content="c41fece712fbd84ee20967da33c2406e8478e23dac8177236be00809738d6277">
     <!-- Javascript -->
     <script defer src="/docs/assets/scripts/script.js"></script>
+    <script defer src="/docs/assets/scripts/nav.js"></script>
+    <script defer src="/docs/assets/scripts/combobox-skipcontent.js"></script>
     <!-- Styleshet -->
     <link rel="stylesheet" href="/docs/assets/style/style.css">
     <!-- Google Fonts -->
@@ -26,18 +28,67 @@
     gtag('config', 'G-SJNZHSJ17G');
     </script>
 </head>
-<body>
+<body class="body-index">
     <!-- Skip to main content -->
-    <a class="skip-content" href="#bio-region"><span class="link">Skip to Main Content</span></a>
+    <div class="combo skip-combo view-width-constrain hide-visually">
+        <div class="container">
+            <div class="combo-input" id="combo1" role="combobox" 
+            tabindex="0" aria-haspopup="listbox" aria-controls="listbox1">Skip To Main Content (Alt + 0)</div>
+            <!-- Combo Menu | List of Options -->
+            <div class="combo-menu" role="listbox" id="listbox1" 
+            aria-labelledby="combo1" tabindex="-1">
+                <div class="regions-list">
+                    <p id="listbox1-lbl1" class="list-lbl">Regions</p>
+                    <hr>
+                    <ol aria-labelledby="listbox1-lbl1" class="regions-list">
+                        <li id="listbox1-region1" >
+                            <a role="option" class="combo-option" href="#navlink1">Navigation</a></li>
+                        <li  id="listbox1-region3" >
+                            <a role="option" class="combo-option" href="#bio-region">Main Content</a></li>
+                        <li  id="listbox1-region4" >
+                            <a role="option" class="combo-option" href="#connect-region">Footer</a></li>
+                    </ol>
+                </div>
+                <div class="headings-list">
+                    <p id="listbox1-lbl2" class="list-lbl">Headings</p>
+                    <hr>
+                    <ol aria-labelledby="listbox1-lbl2" class="heading-list">
+                        <li id="listbox1-heading1" aria-selected="false">
+                            <a role="option" class="combo-option" href="#heading-lbl">A Web For Everyone</a>
+                        </li>
+                        <ol class="sub-menu">
+                            <li id="listbox1-region1" >
+                                <a role="option" class="combo-option sub-option"  href="#bio-lbl">Hi I'm Aaron</a></li>
+                            <li id="listbox1-region1" >
+                                <a role="option" class="combo-option sub-option" href="#skills-lbl">Skills / Expertise</a></li>
+                            <li id="listbox1-region1" >
+                                <a role="option" class="combo-option sub-option" href="#cert-lbl">Certifications</a></li>
+                            <li id="listbox1-region1" >
+                                <a role="option" class="combo-option sub-option" href="#portf-lbl">Portfolio Websites</a></li>
+                            <li id="listbox1-region1" >
+                                <a role="option" class="combo-option sub-option" href="#accessibility-lbl">Digital Accessibility</a></li>
+                            <li id="listbox1-region1" >
+                                <a role="option" class="combo-option sub-option" href="#web-games-lbl">Web Games</a></li>
+                            <li id="listbox1-region1" >
+                                <a role="option" class="combo-option sub-option" href="#connect-lbl">Let's Connect</a></li>
+                            <li id="listbox1-region1" >
+                                <a role="option" class="combo-option sub-option" href="#contact1-lbl">Find Me Elsewhere</a></li>
+                        </ol>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Navigation Region -->
-    <nav class="nav" role="navigation">
+    <nav class="nav nav-contact view-width-constrain" role="navigation">
         <div class="nav-wrapper">
             <div class="author">
                 <img class="img" src="/docs/assets/images/aaron-pfp.jpg" alt="">
                 <p class="text">Aaron Evans</p>
             </div>
             <div class="nav-content">
-                <button class="hamburger-1 hamburger-index" aria-expanded="false" role="Menu button." id="menu">
+                <button class="hamburger-1 hamburger-index" aria-expanded="false" role="menu" id="menu"
+                    aria-label="Menu">
                     <!--background for open nav on tablet/mobile-->
                     <div class="circle-background"></div>
                     <svg class="svg" viewbox="0 0 100 100">
@@ -52,16 +103,18 @@
                     <span id="menu-lbl" class="hide-visually">Menu</span>
                 </button>
                 <ul id="menu-list" class="menu" aria-labelledby="menu-lbl">
-                    <li><a id="navlink1" class="link link1" href="#bio-region">About Me</a></li>
-                    <li><a id="navlink2" class="link link2" href="#portf-region">Portfolio</a></li>
-                    <li><a id="navlink3" class="btn link3" href="https://aarondevspot.com/pages/contact.html">Contact</a></li>
+                    <li><a id="navlink1" class="link link1" href="/#bio-region">About Me</a>
+                    </li>
+                    <li><a id="navlink2" class="link link2" href="/#portf-region">Portfolio</a>
+                    </li>
+                    <li><a id="navlink3" class="btn link3" href="/contact/" aria-current="true">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Heading Section -->
     <div role="region" class="heading-section" aria-labelledby="heading-lbl" aria-describedby="heading-desc1">
-        <div id="lbl-wrapper" class="lbl-wrapper">
+        <div id="lbl-wrapper" class="lbl-wrapper view-width-constrain">
             <h1 id="heading-lbl" class="heading-lbl" aria-label="A Web For Everyone">
                 <span class="lbl-line"><span>A Web For</span></span><br>
                 <span class="lbl-line line2"><span>Everyone</span></span>
@@ -95,7 +148,7 @@
     <!-- Half scrolling section -->
     <div class="about-me-section">
         <div class="left-region">
-            <div class="image-wrapper IO-el">
+            <div class="img-wrapper IO-el">
                 <img class="img" src="/docs/assets/images/aaron-full2.jpg" alt="Aaron Evans at the Washington Monument">
             </div>
         </div>
@@ -164,197 +217,74 @@
     <div id="portf-region" class="portf-region" aria-labelledby="portf-lbl">
         <h2 id="portf-lbl" class="portf-lbl">Portfolio Websites</h2>
         <ul class="content" aria-labelledby="portf-lbl">
+            <li class="screen-card card3">
+                <p class="text">View the Wedding Poetry Portfolio Site</p>
+                <a class="website-link" href="/portfolio/wedding-poetry/" aria-label="Go to Wedding Poetry Portfolio Website." target="_blank" rel="noopener noreferrer">
+                    <div class="phone-camera-wrapper">
+                        <div class="phone-camera"></div>
+                    </div>
+                    <img class="video" src="/docs/assets/images/wedding-site-desktop.PNG" alt="">
+                    <img class="img" src="/docs/assets/images/wedding-mobile.PNG" alt="">
+                </a>
+            </li>
             <li class="screen-card card1">
-            <p class="text">View the Music Portfolio Site</p>
-                <a class="website-link" href="https://atevans33.github.io/MusicSitePortfolio/" aria-label="Go to Music Portfolio Website." target="_blank" rel="noopener noreferrer">  
-                    <div class="phone-camera-wrapper">
-                        <div class="phone-camera"></div>
-                    </div>
-                    <video class="video" src="/docs/assets/videos/music-site.mp4" type="video/mp4" muted class="vid" loop></video>
-                    <img class="img" src="/docs/assets/images/music-portf-website-m.PNG" alt="">
-                </a>
-            </li>
-            <li class="screen-card card2">
-                <p class="text">View the Black Timber Real Estate Portfolio Site</p>
-                <a class="website-link" href="https://blacktimberestate.wordpress.com/" aria-label="Go to Black Timber Real Estate Portfolio Website." target="_blank" rel="noopener noreferrer">
-                    <div class="phone-camera-wrapper">
-                        <div class="phone-camera"></div>
-                    </div>
-                    <video class="video" src="/docs/assets/videos/blacktimber.mp4" type="video/mp4" muted class="vid" loop></video>
-                    <img class="img" src="/docs/assets/images/black-timber-mobile.PNG" alt="">
-                </a>
-            </li>
-            <!-- <li class="screen-card card3">
-                <a href="" aria-label="Bakery Portfolio Website." target="_blank" rel="noopener noreferrer">
-                    <img class="img" src="" alt="">
-                </a>
-            </li> -->
+                <p class="text">View the Music Portfolio Site</p>
+                    <a class="website-link" href="https://atevans33.github.io/MusicSitePortfolio/" aria-label="Go to Music Portfolio Website." target="_blank" rel="noopener noreferrer">  
+                        <div class="phone-camera-wrapper">
+                            <div class="phone-camera"></div>
+                        </div>
+                        <video class="video" src="/docs/assets/videos/music-site.mp4" type="video/mp4" muted class="vid" loop></video>
+                        <img class="img" src="/docs/assets/images/music-portf-website-m.PNG" alt="">
+                    </a>
+                </li>
+                <li class="screen-card card2">
+                    <p class="text">View the Black Timber Real Estate Portfolio Site</p>
+                    <a class="website-link" href="https://blacktimberestate.wordpress.com/" aria-label="Go to Black Timber Real Estate Portfolio Website." target="_blank" rel="noopener noreferrer">
+                        <div class="phone-camera-wrapper">
+                            <div class="phone-camera"></div>
+                        </div>
+                        <video class="video" src="/docs/assets/videos/blacktimber.mp4" type="video/mp4" muted class="vid" loop></video>
+                        <img class="img" src="/docs/assets/images/black-timber-mobile.PNG" alt="">
+                    </a>
+                </li>
         </ul>
     </div>
-    <div role="region" class="access-region" aria-labelledby="access-lbl">
-        <div class="wrapper">
-            <div class="content">
-                <div class="container">
-                    <h2 id="access-lbl" class="access-lbl">Digital Accessibility</h2>
-                    <div class="access-desc">
-                        <p>
-                            Click the highlighted buttons below to see visual examples of the remediation
-                            work that I
-                            offer.
-                        </p>
-                        <p>
-                            With up to a quarter of US adults having some sort of disability, it's important to ensure your web
-                            documents
-                            are
-                            accessible. I have remediated thousands of documents to meet <span id="508-btn" role="button"
-                                tabindex="0" class="example-btn" aria-expanded="true" aria-controls="accordian-access">Section
-                                508</span> standards.
-                            Whether it’s <span id="pdf-btn" role="button" tabindex="0" class="example-btn" aria-expanded="false"
-                                aria-controls="accordian-access">PDFs</span>, <span id="word-btn" role="button" tabindex="0"
-                                class="example-btn" aria-expanded="false" aria-controls="accordian-access">Word
-                                Documents</span>, <span id="ppt-btn" role="button" tabindex="0" class="example-btn"
-                                aria-expanded="false" aria-controls="accordian-access">PowerPoints</span>, or <span id="vid-btn"
-                                role="button" tabindex="0" class="example-btn" aria-expanded="false"
-                                aria-controls="accordian-access">videos</span>, your content will be accessible and
-                            usable.
-                        </p>
-                        <p class="text1">
-                            I offer synchronous and
-                            asynchronous training for content remediation. 
-                            Trainings come with reference documents and/ or webpages for later use by trained individuals.
-                        </p>
-                    </div>
-                </div>
+    <div class="sec sec-2-1">
+        <div class="content content1">
+            <div class="img-wrapper top">
+                <img class="img" src="/docs/assets/images/computer.jpg" alt="">
             </div>
-            <!-- Section 508 Example Card -->
-            <div id="accordian-access" class="accordian" role="region" aria-label="Accessibility Services Information.">
-                <div id="508" class="example section-508 display">
-                    <div class="example-content">
-                        <div class="description">
-                            <h3 class="heading">What is Section 508?</h3>
-                            <p class="text">In 1998, Congress amended the Rehabilitation Act of 1973 to require federal agencies to make
-                                their electronic and information technology (EIT) accessible to people with disabilities. The law applies to
-                                all federal agencies when they develop, procure, maintain, or use electronic
-                                and information technology. </p>
-                        </div>
-                        <div class="btn-container">
-                            <a id="open-link" class="open link display"
-                                href="https://www.section508.gov/manage/laws-and-policies/#:~:text=In%201998%2C%20Congress%20amended%20the%20Rehabilitation%20Act%20of%201973%20to%20require%20federal%20agencies%20to%20make%20their%20electronic%20and%20information%20technology%20(EIT)%20accessible%20to%20people%20with%20disabilities."
-                                target="_blank" rel="noopener noreferrer">Learn about Section 508</a>
-                        </div>
-                    </div>
+            <div class="text">
+                <div class="top">
+                   <h2 id="accessibility-lbl" class="heading-2">Digital Accessibility</h2>
+                    <p class="desc">Have you ever wondered how someone who’s blind uses your website? Well that’s my job!</p> 
                 </div>
-                <!-- Adobe Remediation Example Card -->
-                <div id="adobe" class="example adobe">
-                    <div class="example-content">
-                        <div class="description">
-                            <h3 class="heading">Adobe Remediation</h3>
-                            <p class="text">I have remediated thousands of PDFs and tens of thousands of pages.<br><br>
-                                I am proficient with all PDF file types including fillable forms and graphic.</p>
-                        </div>
-                        <div class="btn-container">
-                            <a id="open-file" class="open link" href="/docs/assets/files/resume-2023.pdf"
-                                target="_blank" rel="noopener noreferrer">Open Example PDF</a>
-                            <button id="contact2" class="contact btn" type="button">Get My File Fixed</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Word Remediation Example Card -->
-                <div id="word" class="example word">
-                    <div class="example-content">
-                        <div class="description">
-                            <h3 class="heading">Word Doc Remediation</h3>
-                            <p class="text">I am proficient in remediation with all Microsoft Office Apps, especially Word.<br><br> Despite common
-                                beliefs, the built-in accessibilty checker isn’t
-                                enough to check for full accessibility. I perform both automatic and manual accessibility checks for issues not
-                                recognizable by current Microsoft accessibility checkers.</p>
-                        </div>
-                        <div class="btn-container">
-                            <a id="open-file" class="open link" href="/docs/assets/files/resume-2023.docx"
-                                target="_blank" rel="noopener noreferrer">Download Example Word</a>
-                            <button id="contact2" class="contact btn">Get My File Fixed</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Powerpoint Example Card -->
-                <div id="ppt" class="example ppt">
-                    <div class="example-content">
-                        <div class="description">
-                            <h3 class="heading">Powerpoint Remediation</h3>
-                            <p class="text">Most accessibility issues with PowerPoint remediation stems from the visual side. Color contrast, font,
-                                layout for cognitive disabilities, etc.
-                                I check for all of these, alongside traditional accessibility issues. 
-                                </p>
-                        </div>
-                        <div class="btn-container">
-                            <button id="contact2" class="contact btn">Get My File Fixed</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Closed Captioning Example Card -->
-                <div id="video" class="example video">
-                    <div class="example-content">
-                        <div class="description">
-                            <h3 class="heading">Video Captioning</h3>
-                            <p class="text">I remediate and assist in setting up either closed
-                                or open captioning for your videos.<br><br> See the article below by the University of Washington to know the
-                                difference and what's best for you.<br><br> <a
-                                    href="https://www.washington.edu/doit/what-difference-between-open-and-closed-captioning#:~:text=Captions%20are%20either%20open%20or%20closed.%20Open%20captions%20always%20are%20in%20view%20and%20cannot%20be%20turned%20off%2C%20whereas%20closed%20captions%20can%20be%20turned%20on%20and%20off%20by%20the%20viewer."
-                                    target="_blank" rel="noopener noreferrer">The
-                                    Difference between closed captioning and open captioning</a>.</p>
-                            </div>
-                        <div class="btn-container">
-                            <a id="open-file" class="open link" href="https://youtu.be/1oLInDwaxgE"
-                                target="_blank" rel="noopener noreferrer">Open Example Video</a>
-                            <button id="contact2" class="contact btn">Get My Video Fixed</button>
-                        </div>
-                    </div>
-                </div>
+                <a href="/accessibility-services/" class="link"><span>Learn More</span>
+                    <img class="img" src="/docs/assets/images/right-arrow.png" alt="">
+                </a>
+            </div>
+            <div class="img-wrapper bottom">
+                <img class="img" src="/docs/assets/images/computer.jpg" alt="">
             </div>
         </div>
-        <dialog id="contact-dialog" class="dialog1" aria-labelledby="dialog1-lbl" aria-describedby="dialog1-desc"
-            aria-modal="true">
-            <div id="dialog1-backdrop" class="backdrop"></div>
-            <div class="dialog1-content">
-                <button type="button" class="exit" id="dialog1-exit">
-                    <svg class="svg" viewbox="0 0 100 100">
-                        <line class="line up-to-down" x1="10" x2="90" y1="10" y2="90" stroke="black" stroke-width="5"
-                            stroke-linecap="round" stroke-dashoffset="0"></line>
-                        <line class="line down-to-up" x1="10" x2="90" y1="90" y2="10" stroke="black" stroke-width="5"
-                            stroke-linecap="round" stroke-dashoffset="0"></line>
-                    </svg>
-                    <span class="hide-visually">Exit</span></button>
-                <h3 id="dialog1-lbl" class="dialog-lbl">Let's get your<br> content accessible</h3>
-                <p id="dialog1-desc" class="desc">Please fill out the form and I will contact you for any additional details,
-                    expectations, and about pricing
-                </p>
-                <p class="text">Fields with an <span aria-hidden="true">(*)</span> are required.</p>
-                <form role="form" class="form" action="https://formsubmit.co/atevans33@gmail.com" method="POST"
-                enctype="multipart/form-data">
-                    <label class="lbl" for="name1">Name<span aria-hidden="true">*</span></label>
-                    <input class="input" type="text" name="name1" id="name1" placeholder="" required>
-                    <label class="lbl" for="email1">Email<span aria-hidden="true">*</span></label>
-                    <input class="input" type="text" name="email1" id="email1" placeholder="" required>
-                    <div class="file-wrapper">
-                        <label class="lbl" for="file2">File to remediate or similar</label>
-                        <input class="file" type="file" name="file2" id="file2" accept=".mp4,.pdf,.ppt,.doc,.docx,.mov,.avi,">
-                    </div>
-                    <label class="lbl" for="dialog1-textarea">Additional details and comments<span aria-hidden="true">*</span></label>
-                    <textarea class="textarea" type="text" name="dialog1-textarea" id="dialog1-textarea" rows="8" placeholder="Comments..." required></textarea>
-                    <label class="lbl training" for="dialog1-checkbox">Training</label>
-                    <div class="checkbox-wrapper">
-                        <input type="checkbox" class="checkbox" name="dialog1-checkbox" id="dialog1-checkbox" aria-describedby="dialog1-checkbox-desc">
-                        <p id="dialog1-checkbox-desc" class="checkbox-desc">I am interested in recieving
-                            accessibility training</p>
-                    </div>
-                    <input class="submit" type="submit" value="Submit">
-                    <input type="hidden" name="_subject" value="New Submission for File Remediation">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="/pages/thankyou.html">
-                </form>
+        <div class="content content2">
+            <div class="img-wrapper top">
+                <img class="img" src="/docs/assets/images/game-board.jpg" alt="">
             </div>
-        </dialog>
+            <div class="text">
+                <div class="top">
+                    <h2 id="web-games-lbl" class="heading-2">Web Games</h2>
+                    <p class="desc">Want to introduce gamification or fun interactions to your website? See an example of my game design. (Coming Soon )</p>
+                </div>
+                <a href="" class="link">
+                    <img class="img" src="/docs/assets/images/right-arrow.png" alt="">
+                    <span>Learn More</span>
+                </a>
+            </div>
+            <div class="img-wrapper bottom">
+                <img class="img" src="/docs/assets/images/computer.jpg" alt="">
+            </div>
+        </div>
     </div>
     <div id="connect-region" class="connect-region" aria-labelledby="connect-lbl">
         <h2 id="connect-lbl" class="connect-lbl">Let's Connect</h2>
