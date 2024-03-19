@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form | Aaron's Web Services</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/docs/assets/style/style.css">
+    <!-- Scripts -->
+    <script defer src="/docs/assets/scripts/combobox-skipcontent.js"></script>
+    <script defer src="/docs/assets/scripts/nav.js"></script>
+    <script defer src="/docs/assets/scripts/combobox.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="docs/assets/images/logo.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJNZHSJ17G"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SJNZHSJ17G');
+    </script>
+</head>
+<body class="body-contact">
+    <div class="slant-wrapper"><div class="background-slant"></div></div>
+    <!-- Navigation Region -->
+    <nav class="nav nav-contact view-width-constrain" role="navigation">
+        <div class="nav-wrapper">
+            <div class="author">
+                <img class="img" src="/docs/assets/images/aaron-pfp.jpg" alt="">
+                <p class="text">Aaron Evans</p>
+            </div>
+            <div class="nav-content">
+                <button class="hamburger-1 hamburger-index" aria-expanded="false" role="menu" id="menu"
+                    aria-label="Menu">
+                    <!--background for open nav on tablet/mobile-->
+                    <div class="circle-background"></div>
+                    <svg class="svg" viewbox="0 0 100 100">
+                        <line class="line top" x1="90" x2="10" y1="25" y2="25" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
+                        <line class="line mid" x1="10" x2="90" y1="50" y2="50" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
+                        <line class="line bot" x1="10" x2="90" y1="75" y2="75" stroke="black" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0">
+                        </line>
+                    </svg>
+                    <span id="menu-lbl" class="hide-visually">Menu</span>
+                </button>
+                <ul id="menu-list" class="menu" aria-labelledby="menu-lbl">
+                    <li><a id="navlink1" class="link link1" href="/#bio-region">About Me</a>
+                    </li>
+                    <li><a id="navlink2" class="link link2" href="/#portf-region">Portfolio</a>
+                    </li>
+                    <li><a id="navlink3" class="btn link3" href="/contact/" aria-current="true">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="main-contact" id="main-content">
+        <div class="grid contact-grid">
+            <region class="form-region1 region" aria-labelledby="form-region1-lbl">
+                <div class="container">
+                    <div class="heading-wrapper"><h1 class="heading" id="form-region1-lbl">Let's Connect</h1></div>
+                    <form role="form" class="contact-form grid form-grid" action="https://formsubmit.co/atevans33@gmail.com" method="POST">
+                        <!-- Name Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="name" class="lbl">Name<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="text" name="name" id="name" placeholder="Full Name" required>
+                            </div>
+                        </div>
+                        <!-- Email Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="email" class="lbl">Email<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="email" name="email" id="email" placeholder="Email Address" required>
+                                <p class="error-desc">Improper email format. Example: 123@gmail.com</p>
+                            </div>
+                        </div>
+                        <!-- Phone Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="phone" class="lbl">Phone<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="number" name="phone" id="phone" placeholder="Phone" required>
+                                <p class="error-desc">Improper phone format. Example: 012 345 6789</p>
+                            </div>
+                        </div>
+                        <!-- Project Type Field -->
+                        <div class="field-wrapper flex">
+                            <div class="label-wrapper">
+                                <label for="combo1" class="lbl" id="combo1-lbl">Project Type<span aria-hidden="true">*</span></label>
+                            </div>
+                            <div class="input-wrapper project-input-wrapper">
+                                <div class="combo combo-standard combo1">
+                                    <div class="combo-input" id="combo1" role="combobox" 
+                                    tabindex="0" aria-labelledby="combo1-lbl"
+                                    aria-haspopup="listbox" aria-controls="listbox1">Website Design</div>
+                                    <!-- Combo Menu | List of Options -->
+                                    <div class="combo-menu" role="listbox" id="listbox1" 
+                                    aria-labelledby="combo1-lbl" tabindex="-1">
+                                        <div role="option" id="combo1-0" class="combo-option"
+                                        aria-selected="false">Accessibility Review / VPAT / ACR</div>
+                                        <div role="option" id="combo1-1" class="combo-option"
+                                        aria-selected="false">Document Remediation</div>
+                                        <div role="option" id="combo1-2" class="combo-option"
+                                        aria-selected="false">Website Changes</div>
+                                        <div role="option" id="combo1-3" class="combo-option"
+                                        aria-selected="true">Website Design</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Additional Comments Field -->
+                        <div class="field-wrapper flex ">
+                            <div class="label-wrapper lw-5">
+                                <label for="comments" class="lbl">Anything Else?<br>(Optional)</label>
+                            </div>
+                            <div class="input-wrapper iw-5">
+                                <textarea class="textarea" type="text" name="comments" id="comments" placeholder="Extra Comments" rows="8"></textarea>
+                            </div>
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="field-wrapper flex ">
+                            <div class="label-wrapper submit-label-wrapper" aria-hidden="true">
+                            </div>
+                            <div class="input-wrapper submit">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </div>
+                        <!-- Form API -->
+                        <input type="hidden" name="_subject" value="New Submission for Web Development">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://aarondevspot.com/thankyou/">
+                    </form>
+                </div>
+            </region>
+            <region role="region" class="socials-region region" aria-labelledby="contact1-lbl" aria-describedby="contact1-desc">
+                <div class="region-content">
+                    <h2 class="heading" id="contact1-lbl">Find me elsewhere</h2>
+                    <p id="contact1-desc" class="desc">Let's make a web for eveeryone, together.</p>
+                    <ul class="list flex flex-list-contact">
+                        <li class="li">
+                            <a href="https://www.linkedin.com/in/aaron-evans-795a98190/" target="_blank" rel="noopener">
+                                <img src="/docs/assets/images/linkedin-logo.png" alt="">
+                                <p class="hide-visually">View LinkedIn Profile.</p>
+                            </a>
+                        </li>
+                        <li class="li">
+                            <a href="https://www.upwork.com/freelancers/~01740a6b8654c1b6b8?viewMode=1&s=1044578476142100494" target="_blank" rel="noopener">
+                                <img src="/docs/assets/images/upwork-logo.png" alt="">
+                                <p class="hide-visually">View Upwork Profile.</p>
+                            </a>
+                        </li>
+                        <li class="li">
+                            <a href="https://github.com/atevans33/AaronDevSpot" target="_blank" rel="noopener">
+                                <img src="/docs/assets/images/github-logo.png" alt="">
+                                <p class="hide-visually">View Github for this website.</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </region>
+        </div>
+        
+    </main>
+</body>
+</html>
