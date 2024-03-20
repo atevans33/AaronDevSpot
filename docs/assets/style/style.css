@@ -928,12 +928,18 @@ p {
 .left-region .img-wrapper .img {
   width: 70%;
   aspect-ratio: 4 / 5;
-  
 }
 
-.bio-region {
+.body-index .about-me-section .bio-region {
   grid-row: 1;
   grid-column: 2;
+  justify-content: start;
+  padding-top: 5vh;
+  box-sizing: border-box;
+}
+
+.body-index .bio-region .wrapper {
+  margin-top: 5vh;
 }
 
 .skills-region {
@@ -1103,18 +1109,18 @@ p {
   flex-direction: column;
 }
 
-.screen-card .video {
+.screen-card .img-landscape {
   width: 60vw;
   aspect-ratio: 16/9;
   box-shadow: 0px 0px 27px 3px rgba(0, 0, 0, 0.75);
 }
 @media screen and (orientation: portrait) {
-  .screen-card .video {
+  .screen-card .img-landscape {
     display: none;
   }
 }
 
-.screen-card .video {
+.screen-card .img-landscape {
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1327,26 +1333,6 @@ p {
 .access-region .example-content {
   height: min-content;
   width: min-content;
-}
-
-.accordian .section-508 .description {
-  background-image: url(/docs/assets/images/section-508.png);
-}
-
-.accordian .adobe .description {
-  background-image: url(/docs/assets/images/adobe-remediation.png);
-}
-
-.accordian .word .description {
-  background-image: url(/docs/assets/images/word-remediation.png);
-}
-
-.accordian .ppt .description {
-  background-image: url(/docs/assets/images/powerpoint-remediation.png);
-}
-
-.accordian .video .description {
-  background-image: url(/docs/assets/images/video-remediation.png);
 }
 
 
@@ -1772,11 +1758,11 @@ p {
 .connect-region .link-wrapper a {
   text-decoration: none;
   background-color: white;
-  color: #0d0d0d;
+  color: #212C59;
   font-family: "Quicksand", sans-serif;
   font-weight: 600;
   padding: .7rem 1rem .7rem 1rem;
-  border-radius: 10px;  
+  border-radius: 10px; 
 }
 
 .connect-region .form {
